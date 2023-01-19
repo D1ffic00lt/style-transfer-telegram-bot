@@ -1,10 +1,12 @@
 import os
 import warnings
-
 import telebot
 import logging
 
-from config import TOKEN, FORMAT, DATE_FORMAT, LOG_PATH
+from config import (
+    TOKEN, FORMAT,
+    DATE_FORMAT, LOG_PATH
+)
 from modules.model.model import StyleModel
 
 warnings.filterwarnings("ignore")
@@ -20,10 +22,11 @@ logging.getLogger().addHandler(handler)
 
 
 model = StyleModel()
-logging.info("start")
+
+logging.info("Program started")
 
 
-@bot.message_handler(commands=["start"])
+@bot.message_handler(commands=["start", "convert"])
 def start(message: telebot.types.Message):
     bot.send_message(message.chat.id, "Отправьте стиль!")
     bot.register_next_step_handler(message, get_style)
@@ -50,23 +53,26 @@ def get_object(message: telebot.types.Message):
     if not os.path.isdir("user_files"):
         os.mkdir("user_files")
     file_info = bot.get_file(message.photo[-1].file_id)
-    logging.info(file_info.file_path)
     downloaded_file = bot.download_file(file_info.file_path)
+
     src = 'user_files/' + "object_" + str(message.chat.id) + ".jpg"
     with open(src, 'wb') as new_file:
         new_file.write(downloaded_file)
+
     bot.send_message(message.chat.id, "Обработка")
-    logging.info("convert")
+
     style_img = model.image_loader(f"user_files/style_{message.chat.id}.jpg")
-    logging.info("style")
     content_img = model.image_loader(f"user_files/object_{message.chat.id}.jpg")
-    logging.info("object")
     input_img = content_img.clone()
-    logging.info("cloned")
+
     output = model.imshow(model.run_style_transfer(content_img, style_img, input_img, num_steps=200))
-    logging.info("run_style_transfer")
     output.save(f"user_files/result_{message.chat.id}.jpg")
+
     bot.send_photo(message.chat.id, photo=open(f'user_files/result_{message.chat.id}.jpg', 'rb'))
+
+    os.remove(f"user_files/style_{message.chat.id}.jpg")
+    os.remove(f"user_files/object_{message.chat.id}.jpg")
+    os.remove(f"user_files/result_{message.chat.id}.jpg")
 
 
 if __name__ == '__main__':

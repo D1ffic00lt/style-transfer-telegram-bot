@@ -1,40 +1,57 @@
 import logging
-
 import torch
 import torchvision.models as models
 import torchvision.transforms as transforms
-from PIL import Image
 import torch.nn as nn
 import torch.optim as optim
+
+from PIL import Image
+
 from modules.model.loss import Normalization, ContentLoss, StyleLoss
 
 
 class StyleModel(object):
+    IMGSIZE = (256, 256)
+    CNN_NORMALIZATION_MEAN = torch.tensor([0.485, 0.456, 0.406])
+    CNN_NORMALIZATION_STD = torch.tensor([0.229, 0.224, 0.225])
+
     def __init__(self):
+        self.sequential_model = None
+        self.style_loss = None
+        self.target_feature = None
+        self.content_loss = None
+        self.target = None
+        self.name = None
+        self.indexes = None
+        self.style_losses = None
+        self.content_losses = None
+        self.normalization = None
+        self.image = None
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = models.vgg19(pretrained=True).features.to(self.device).eval()
-        self.imsize = (256, 256)
         self.loader = transforms.Compose(
             [
-                transforms.Resize(self.imsize),
+                transforms.Resize(StyleModel.IMGSIZE),
                 transforms.ToTensor()
             ]
         )
-        self.cnn_normalization_mean = torch.tensor([0.485, 0.456, 0.406]).to(self.device)
-        self.cnn_normalization_std = torch.tensor([0.229, 0.224, 0.225]).to(self.device)
+        self.cnn_normalization_mean = StyleModel.CNN_NORMALIZATION_MEAN.to(self.device)
+        self.cnn_normalization_std = StyleModel.CNN_NORMALIZATION_STD.to(self.device)
         self.unloader = transforms.ToPILImage()
-        logging.info("model inited")
+        logging.info("Model created")
 
     def image_loader(self, image_name):
-        image = Image.open(image_name)
-        image = self.loader(image).unsqueeze(0)
-        return image.to(self.device, torch.float)
+        self.image = Image.open(image_name)
+        self.image = self.loader(self.image).unsqueeze(0)
+        logging.info(f"Uploaded file {image_name}")
+        return self.image.to(self.device, torch.float)
 
     def imshow(self, tensor):
-        image = tensor.cpu().clone()
-        image = image.squeeze(0)
-        image = self.unloader(image)
-        return image
+        self.image = tensor.cpu().clone()
+        self.image = self.image.squeeze(0)
+        self.image = self.unloader(self.image)
+        logging.info(f"Tensor converted to image")
+        return self.image
 
     def get_style_model_and_losses(
             self, normalization_mean, normalization_std,
@@ -46,66 +63,66 @@ class StyleModel(object):
             style_layers = ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5']
         if content_layers is None:
             content_layers = ['conv_4']
-        normalization = Normalization(normalization_mean, normalization_std).to(self.device)
+        self.normalization = Normalization(normalization_mean, normalization_std).to(self.device)
 
-        content_losses = []
-        style_losses = []
+        self.content_losses = []
+        self.style_losses = []
 
-        model = nn.Sequential(normalization)
+        self.sequential_model = nn.Sequential(self.normalization)
 
-        i = 0
+        self.indexes = 0
         for layer in self.model.children():
             if isinstance(layer, nn.Conv2d):
-                i += 1
-                name = 'conv_{}'.format(i)
+                self.indexes += 1
+                self.name = 'conv_{}'.format(self.indexes)
             elif isinstance(layer, nn.ReLU):
-                name = 'relu_{}'.format(i)
+                self.name = 'relu_{}'.format(self.indexes)
                 layer = nn.ReLU(inplace=False)
             elif isinstance(layer, nn.MaxPool2d):
-                name = 'pool_{}'.format(i)
+                self.name = 'pool_{}'.format(self.indexes)
             elif isinstance(layer, nn.BatchNorm2d):
-                name = 'bn_{}'.format(i)
+                self.name = 'bn_{}'.format(self.indexes)
             else:
                 raise RuntimeError('Unrecognized layer: {}'.format(layer.__class__.__name__))
 
-            model.add_module(name, layer)
+            self.sequential_model.add_module(self.name, layer)
 
-            if name in content_layers:
-                target = model(content_img).detach()
-                content_loss = ContentLoss(target)
-                model.add_module("content_loss_{}".format(i), content_loss)
-                content_losses.append(content_loss)
+            if self.name in content_layers:
+                self.target = self.sequential_model(content_img).detach()
+                self.content_loss = ContentLoss(self.target)
+                self.sequential_model.add_module("content_loss_{}".format(self.indexes), self.content_loss)
+                self.content_losses.append(self.content_loss)
 
-            if name in style_layers:
-                target_feature = model(style_img).detach()
-                style_loss = StyleLoss(target_feature)
-                model.add_module("style_loss_{}".format(i), style_loss)
-                style_losses.append(style_loss)
+            if self.name in style_layers:
+                self.target_feature = self.sequential_model(style_img).detach()
+                self.style_loss = StyleLoss(self.target_feature)
+                self.sequential_model.add_module("style_loss_{}".format(self.indexes), self.style_loss)
+                self.style_losses.append(self.style_loss)
 
-        for i in range(len(model) - 1, -1, -1):
-            if isinstance(model[i], ContentLoss) or isinstance(model[i], StyleLoss):
+        for self.indexes in range(len(self.sequential_model) - 1, -1, -1):
+            if isinstance(self.sequential_model[self.indexes], ContentLoss) or \
+                    isinstance(self.sequential_model[self.indexes], StyleLoss):
                 break
 
-        model = model[:(i + 1)]
+        self.sequential_model = self.sequential_model[:(self.indexes + 1)]
 
-        return model, style_losses, content_losses
+        return self.sequential_model, self.style_losses, self.content_losses
 
     @staticmethod
     def get_input_optimizer(input_img):
-        optimizer = optim.LBFGS([input_img])
-        return optimizer
+        return optim.LBFGS([input_img])
 
     def run_style_transfer(
             self, content_img, style_img, input_img, num_steps=300,
             style_weight=1000000, content_weight=1
     ):
         logging.info('Building the style transfer model..')
-        model, style_losses, content_losses = self.get_style_model_and_losses(
+        style_model, style_losses, content_losses = self.get_style_model_and_losses(
             self.cnn_normalization_mean, self.cnn_normalization_std, style_img, content_img
         )
 
         input_img.requires_grad_(True)
-        model.requires_grad_(False)
+        style_model.requires_grad_(False)
 
         optimizer = self.get_input_optimizer(input_img)
 
@@ -118,7 +135,7 @@ class StyleModel(object):
                     input_img.clamp_(0, 1)
 
                 optimizer.zero_grad()
-                model(input_img)
+                style_model(input_img)
                 style_score = 0
                 content_score = 0
 
@@ -135,9 +152,10 @@ class StyleModel(object):
 
                 run[0] += 1
                 if run[0] % 50 == 0:
-                    logging.info("run {}:".format(run))
-                    logging.info('Style Loss : {:4f} Content Loss: {:4f}'.format(
-                        style_score.item(), content_score.item()))
+                    logging.info('Style Loss : {:4f} Content Loss : {:4f}'.format(
+                        style_score.item(), content_score.item()
+                        )
+                    )
 
                 return style_score + content_score
 
