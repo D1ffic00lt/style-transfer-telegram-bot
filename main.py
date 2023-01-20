@@ -2,6 +2,7 @@ import os
 import warnings
 import telebot
 import logging
+import asyncio
 
 from config import (
     TOKEN, FORMAT,
@@ -48,6 +49,7 @@ def get_style(message: telebot.types.Message):
 
 
 def get_object(message: telebot.types.Message):
+    logging.info(1)
     if message.photo is None:
         return
     if not os.path.isdir("user_files"):
@@ -64,15 +66,18 @@ def get_object(message: telebot.types.Message):
     style_img = model.image_loader(f"user_files/style_{message.chat.id}.jpg")
     content_img = model.image_loader(f"user_files/object_{message.chat.id}.jpg")
     input_img = content_img.clone()
-
-    output = model.imshow(model.run_style_transfer(content_img, style_img, input_img, num_steps=200))
+    output = asyncio.run(model.run_style_transfer(content_img, style_img, input_img, num_steps=200))
+    output = model.imshow(output)
     output.save(f"user_files/result_{message.chat.id}.jpg")
 
     bot.send_photo(message.chat.id, photo=open(f'user_files/result_{message.chat.id}.jpg', 'rb'))
 
-    os.remove(f"user_files/style_{message.chat.id}.jpg")
-    os.remove(f"user_files/object_{message.chat.id}.jpg")
-    os.remove(f"user_files/result_{message.chat.id}.jpg")
+    try:
+        os.remove(f"user_files/style_{message.chat.id}.jpg")
+        os.remove(f"user_files/object_{message.chat.id}.jpg")
+        os.remove(f"user_files/result_{message.chat.id}.jpg")
+    except FileNotFoundError:
+        pass
 
 
 if __name__ == '__main__':

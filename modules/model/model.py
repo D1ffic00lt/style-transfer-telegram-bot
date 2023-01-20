@@ -11,7 +11,7 @@ from modules.model.loss import Normalization, ContentLoss, StyleLoss
 
 
 class StyleModel(object):
-    IMGSIZE = (256, 256)
+    IMGSIZE = (512, 512)
     CNN_NORMALIZATION_MEAN = torch.tensor([0.485, 0.456, 0.406])
     CNN_NORMALIZATION_STD = torch.tensor([0.229, 0.224, 0.225])
 
@@ -53,7 +53,7 @@ class StyleModel(object):
         logging.info(f"Tensor converted to image")
         return self.image
 
-    def get_style_model_and_losses(
+    async def get_style_model_and_losses(
             self, normalization_mean, normalization_std,
             style_img, content_img,
             content_layers=None,
@@ -112,14 +112,15 @@ class StyleModel(object):
     def get_input_optimizer(input_img):
         return optim.LBFGS([input_img])
 
-    def run_style_transfer(
+    async def run_style_transfer(
             self, content_img, style_img, input_img, num_steps=300,
             style_weight=1000000, content_weight=1
     ):
         logging.info('Building the style transfer model..')
-        style_model, style_losses, content_losses = self.get_style_model_and_losses(
+        style_model, style_losses, content_losses = await self.get_style_model_and_losses(
             self.cnn_normalization_mean, self.cnn_normalization_std, style_img, content_img
         )
+        logging.info(str(type(style_losses)) + str(type(style_model)) + str(type(content_losses)))
 
         input_img.requires_grad_(True)
         style_model.requires_grad_(False)
