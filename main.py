@@ -63,7 +63,7 @@ def get_object(message: telebot.types.Message):
     logging.info("object")
     input_img = content_img.clone()
     logging.info("cloned")
-    output = model.imshow(model.run_style_transfer(content_img, style_img, input_img, num_steps=200))
+    output = model.imshow(model.run_style_transfer(content_img, style_img, input_img, num_steps=400))
     logging.info("run_style_transfer")
     output.save(f"user_files/result_{message.chat.id}.jpg")
     bot.send_photo(message.chat.id, photo=open(f'user_files/result_{message.chat.id}.jpg', 'rb'))
