@@ -66,8 +66,10 @@ def get_object(message: telebot.types.Message):
     style_img = model.image_loader(f"user_files/style_{message.chat.id}.jpg")
     content_img = model.image_loader(f"user_files/object_{message.chat.id}.jpg")
     input_img = content_img.clone()
-    output = asyncio.run(model.run_style_transfer(content_img, style_img, input_img, num_steps=200))
-    output = model.imshow(output)
+    logging.info("cloned")
+    output = model.imshow(model.run_style_transfer(content_img, style_img, input_img, num_steps=400))
+    logging.info("run_style_transfer")
+
     output.save(f"user_files/result_{message.chat.id}.jpg")
 
     bot.send_photo(message.chat.id, photo=open(f'user_files/result_{message.chat.id}.jpg', 'rb'))
