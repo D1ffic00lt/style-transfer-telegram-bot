@@ -1,4 +1,5 @@
 import os
+import cv2
 import warnings
 import telebot
 import logging
@@ -15,12 +16,10 @@ warnings.filterwarnings("ignore")
 bot = telebot.TeleBot(TOKEN)
 bot.skip_pending = True
 
-
 logging.basicConfig(format=FORMAT, datefmt=DATE_FORMAT, level=logging.INFO)
 handler = logging.FileHandler(LOG_PATH, mode='+a')
 handler.setFormatter(logging.Formatter(FORMAT))
 logging.getLogger().addHandler(handler)
-
 
 model = StyleModel()
 
@@ -29,6 +28,10 @@ logging.info("Program started")
 
 @bot.message_handler(commands=["start", "convert"])
 def start(message: telebot.types.Message):
+    try:
+        logging.info(f"tasks: {asyncio.all_tasks()}")
+    except RuntimeError:
+        logging.error("NO TASKS!!!!!")
     bot.send_message(message.chat.id, "Отправьте стиль!")
     bot.register_next_step_handler(message, get_style)
 
@@ -49,7 +52,6 @@ def get_style(message: telebot.types.Message):
 
 
 def get_object(message: telebot.types.Message):
-    logging.info(1)
     if message.photo is None:
         return
     if not os.path.isdir("user_files"):
@@ -57,21 +59,26 @@ def get_object(message: telebot.types.Message):
     file_info = bot.get_file(message.photo[-1].file_id)
     downloaded_file = bot.download_file(file_info.file_path)
 
-    src = 'user_files/' + "object_" + str(message.chat.id) + ".jpg"
-    with open(src, 'wb') as new_file:
+    with open('user_files/' + "object_" + str(message.chat.id) + ".jpg", 'wb') as new_file:
         new_file.write(downloaded_file)
 
     bot.send_message(message.chat.id, "Обработка")
 
-    style_img = model.image_loader(f"user_files/style_{message.chat.id}.jpg")
-    content_img = model.image_loader(f"user_files/object_{message.chat.id}.jpg")
+    image_shape = list(cv2.imread(f"user_files/object_{message.chat.id}.jpg").shape[:2])
+
+    style_img = model.image_loader(f"user_files/style_{message.chat.id}.jpg", image_shape)
+    content_img = model.image_loader(f"user_files/object_{message.chat.id}.jpg", image_shape)
+
     input_img = content_img.clone()
     logging.info("cloned")
-    output = model.imshow(model.run_style_transfer(content_img, style_img, input_img, num_steps=400))
-    logging.info("run_style_transfer")
-
+    output = asyncio.run(
+        model.run_style_transfer(
+            content_img, style_img,
+            input_img, num_steps=1000
+        )
+    )
+    output = model.imshow(output)
     output.save(f"user_files/result_{message.chat.id}.jpg")
-
     bot.send_photo(message.chat.id, photo=open(f'user_files/result_{message.chat.id}.jpg', 'rb'))
 
     try:
@@ -80,6 +87,8 @@ def get_object(message: telebot.types.Message):
         os.remove(f"user_files/result_{message.chat.id}.jpg")
     except FileNotFoundError:
         pass
+    # asyncio.run(model.queue.join())
+    # print(model.queue.())
 
 
 if __name__ == '__main__':

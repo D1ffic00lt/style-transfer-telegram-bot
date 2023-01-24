@@ -1,4 +1,5 @@
 import logging
+
 import torch
 import torchvision.models as models
 import torchvision.transforms as transforms
@@ -40,7 +41,17 @@ class StyleModel(object):
         self.unloader = transforms.ToPILImage()
         logging.info("Model created")
 
-    def image_loader(self, image_name):
+    def image_loader(self, image_name, imgsize: list[int, int]):
+        if imgsize[0] > 700:
+            imgsize[0] = int(imgsize[0] / (imgsize[0] / 700))
+        if imgsize[1] > 700:
+            imgsize[1] = int(imgsize[1] / (imgsize[1] / 700))
+        self.loader = transforms.Compose(
+            [
+                transforms.Resize(imgsize),
+                transforms.ToTensor()
+            ]
+        )
         self.image = Image.open(image_name)
         self.image = self.loader(self.image).unsqueeze(0)
         logging.info(f"Uploaded file {image_name}")
@@ -120,7 +131,6 @@ class StyleModel(object):
         style_model, style_losses, content_losses = await self.get_style_model_and_losses(
             self.cnn_normalization_mean, self.cnn_normalization_std, style_img, content_img
         )
-        logging.info(str(type(style_losses)) + str(type(style_model)) + str(type(content_losses)))
 
         input_img.requires_grad_(True)
         style_model.requires_grad_(False)
@@ -155,7 +165,7 @@ class StyleModel(object):
                 if run[0] % 50 == 0:
                     logging.info('Style Loss : {:4f} Content Loss : {:4f}'.format(
                         style_score.item(), content_score.item()
-                        )
+                    )
                     )
 
                 return style_score + content_score
