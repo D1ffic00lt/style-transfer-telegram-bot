@@ -1,0 +1,547 @@
+[2023-01-24 21:52:37,045] [INFO]: 50841 root Model created
+[2023-01-24 21:52:37,045] [INFO]: 50841 root Model created
+[2023-01-24 21:52:37,045] [INFO]: 50841 root Program started
+[2023-01-24 21:52:37,045] [INFO]: 50841 root Program started
+[2023-01-24 21:53:22,423] [INFO]: 50841 root photos/file_123.jpg
+[2023-01-24 21:53:22,423] [INFO]: 50841 root photos/file_123.jpg
+[2023-01-24 21:53:40,851] [INFO]: 50841 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 21:53:40,851] [INFO]: 50841 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 21:53:40,857] [INFO]: 50841 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 21:53:40,857] [INFO]: 50841 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 21:53:40,858] [INFO]: 50841 root cloned
+[2023-01-24 21:53:40,858] [INFO]: 50841 root cloned
+[2023-01-24 21:57:53,241] [INFO]: 51099 root Model created
+[2023-01-24 21:57:53,241] [INFO]: 51099 root Program started
+[2023-01-24 21:58:07,956] [INFO]: 51099 root photos/file_123.jpg
+[2023-01-24 21:58:12,825] [INFO]: 51099 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 21:58:12,832] [INFO]: 51099 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 21:58:12,833] [INFO]: 51099 root cloned
+[2023-01-24 21:58:53,108] [INFO]: 51185 root Model created
+[2023-01-24 21:58:53,109] [INFO]: 51185 root Program started
+[2023-01-24 21:59:01,141] [INFO]: 51185 root photos/file_123.jpg
+[2023-01-24 21:59:05,325] [INFO]: 51185 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 21:59:05,331] [INFO]: 51185 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 21:59:05,331] [INFO]: 51185 root cloned
+[2023-01-24 22:00:48,356] [INFO]: 51282 root Model created
+[2023-01-24 22:00:48,356] [INFO]: 51282 root Program started
+[2023-01-24 22:01:04,288] [INFO]: 51282 root photos/file_123.jpg
+[2023-01-24 22:01:09,201] [INFO]: 51282 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:01:09,207] [INFO]: 51282 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:01:09,208] [INFO]: 51282 root cloned
+[2023-01-24 22:01:55,402] [INFO]: 51354 root Model created
+[2023-01-24 22:01:55,402] [INFO]: 51354 root Program started
+[2023-01-24 22:02:04,681] [INFO]: 51354 root photos/file_123.jpg
+[2023-01-24 22:02:10,170] [INFO]: 51354 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:02:10,176] [INFO]: 51354 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:02:10,176] [INFO]: 51354 root cloned
+[2023-01-24 22:02:10,180] [ERROR]: 51354 root Task <Task pending name='Task-4' coro=<Queue.join() running at /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/queues.py:223> cb=[_run_until_complete_cb() at /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py:184]> got Future <Future pending> attached to a different loop
+[2023-01-24 22:02:50,928] [INFO]: 51354 root Model created
+[2023-01-24 22:02:50,928] [INFO]: 51354 root Model created
+[2023-01-24 22:02:50,928] [INFO]: 51354 root Program started
+[2023-01-24 22:02:50,928] [INFO]: 51354 root Program started
+[2023-01-24 22:03:03,252] [INFO]: 51354 root photos/file_123.jpg
+[2023-01-24 22:03:03,252] [INFO]: 51354 root photos/file_123.jpg
+[2023-01-24 22:03:08,645] [INFO]: 51354 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:03:08,645] [INFO]: 51354 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:03:08,651] [INFO]: 51354 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:03:08,651] [INFO]: 51354 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:03:08,651] [INFO]: 51354 root cloned
+[2023-01-24 22:03:08,651] [INFO]: 51354 root cloned
+[2023-01-24 22:07:42,811] [INFO]: 51631 root Model created
+[2023-01-24 22:07:42,811] [INFO]: 51631 root Program started
+[2023-01-24 22:07:51,745] [INFO]: 51631 root photos/file_123.jpg
+[2023-01-24 22:07:55,891] [INFO]: 51631 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:07:55,898] [INFO]: 51631 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:07:55,898] [INFO]: 51631 root cloned
+[2023-01-24 22:07:55,899] [ERROR]: 51631 root 'Queue' object has no attribute 'gather'
+[2023-01-24 22:08:18,550] [INFO]: 51695 root Model created
+[2023-01-24 22:08:18,551] [INFO]: 51695 root Program started
+[2023-01-24 22:08:26,235] [INFO]: 51695 root photos/file_123.jpg
+[2023-01-24 22:08:31,573] [INFO]: 51695 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:08:31,579] [INFO]: 51695 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:08:31,579] [INFO]: 51695 root cloned
+[2023-01-24 22:08:31,581] [ERROR]: 51695 root no running event loop
+[2023-01-24 22:09:57,185] [INFO]: 51695 root Model created
+[2023-01-24 22:09:57,185] [INFO]: 51695 root Model created
+[2023-01-24 22:09:57,186] [INFO]: 51695 root Program started
+[2023-01-24 22:09:57,186] [INFO]: 51695 root Program started
+[2023-01-24 22:10:06,161] [INFO]: 51695 root photos/file_123.jpg
+[2023-01-24 22:10:06,161] [INFO]: 51695 root photos/file_123.jpg
+[2023-01-24 22:10:09,642] [INFO]: 51695 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:10:09,642] [INFO]: 51695 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:10:09,649] [INFO]: 51695 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:10:09,649] [INFO]: 51695 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:10:09,649] [INFO]: 51695 root cloned
+[2023-01-24 22:10:09,649] [INFO]: 51695 root cloned
+[2023-01-24 22:10:09,650] [ERROR]: 51695 root no running event loop
+[2023-01-24 22:10:09,650] [ERROR]: 51695 root no running event loop
+[2023-01-24 22:10:28,628] [INFO]: 51695 root Model created
+[2023-01-24 22:10:28,628] [INFO]: 51695 root Model created
+[2023-01-24 22:10:28,628] [INFO]: 51695 root Model created
+[2023-01-24 22:10:28,628] [INFO]: 51695 root Program started
+[2023-01-24 22:10:28,628] [INFO]: 51695 root Program started
+[2023-01-24 22:10:28,628] [INFO]: 51695 root Program started
+[2023-01-24 22:10:56,197] [INFO]: 51695 root photos/file_123.jpg
+[2023-01-24 22:10:56,197] [INFO]: 51695 root photos/file_123.jpg
+[2023-01-24 22:10:56,197] [INFO]: 51695 root photos/file_123.jpg
+[2023-01-24 22:11:02,193] [INFO]: 51695 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:11:02,193] [INFO]: 51695 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:11:02,193] [INFO]: 51695 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:11:02,200] [INFO]: 51695 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:11:02,200] [INFO]: 51695 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:11:02,200] [INFO]: 51695 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:11:02,200] [INFO]: 51695 root cloned
+[2023-01-24 22:11:02,200] [INFO]: 51695 root cloned
+[2023-01-24 22:11:02,200] [INFO]: 51695 root cloned
+[2023-01-24 22:11:02,203] [ERROR]: 51695 root There is no current event loop in thread 'WorkerThread5'.
+[2023-01-24 22:11:02,203] [ERROR]: 51695 root There is no current event loop in thread 'WorkerThread5'.
+[2023-01-24 22:11:02,203] [ERROR]: 51695 root There is no current event loop in thread 'WorkerThread5'.
+[2023-01-24 22:22:18,718] [INFO]: 52348 root Model created
+[2023-01-24 22:22:18,718] [INFO]: 52348 root Program started
+[2023-01-24 22:22:25,638] [ERROR]: 52348 root no running event loop
+[2023-01-24 22:23:11,303] [INFO]: 52348 root Model created
+[2023-01-24 22:23:11,303] [INFO]: 52348 root Model created
+[2023-01-24 22:23:11,311] [INFO]: 52348 root Program started
+[2023-01-24 22:23:11,311] [INFO]: 52348 root Program started
+[2023-01-24 22:23:31,548] [INFO]: 52348 root photos/file_123.jpg
+[2023-01-24 22:23:31,548] [INFO]: 52348 root photos/file_123.jpg
+[2023-01-24 22:23:36,856] [INFO]: 52348 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:23:36,856] [INFO]: 52348 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:23:36,863] [INFO]: 52348 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:23:36,863] [INFO]: 52348 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:23:36,863] [INFO]: 52348 root cloned
+[2023-01-24 22:23:36,863] [INFO]: 52348 root cloned
+[2023-01-24 22:23:36,864] [INFO]: 52348 root Building the style transfer model..
+[2023-01-24 22:23:36,864] [INFO]: 52348 root Building the style transfer model..
+[2023-01-24 22:23:38,332] [INFO]: 52348 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:23:38,332] [INFO]: 52348 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:23:38,333] [INFO]: 52348 root Optimizing..
+[2023-01-24 22:23:38,333] [INFO]: 52348 root Optimizing..
+[2023-01-24 22:23:46,493] [INFO]: 52348 root photos/file_123.jpg
+[2023-01-24 22:23:46,493] [INFO]: 52348 root photos/file_123.jpg
+[2023-01-24 22:23:51,164] [INFO]: 52348 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:23:51,164] [INFO]: 52348 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:23:51,185] [INFO]: 52348 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:23:51,185] [INFO]: 52348 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:23:51,187] [INFO]: 52348 root cloned
+[2023-01-24 22:23:51,187] [INFO]: 52348 root cloned
+[2023-01-24 22:23:51,193] [INFO]: 52348 root Building the style transfer model..
+[2023-01-24 22:23:51,193] [INFO]: 52348 root Building the style transfer model..
+[2023-01-24 22:23:53,711] [INFO]: 52348 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:23:53,711] [INFO]: 52348 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:23:53,713] [INFO]: 52348 root Optimizing..
+[2023-01-24 22:23:53,713] [INFO]: 52348 root Optimizing..
+[2023-01-24 22:27:17,478] [INFO]: 52566 root Model created
+[2023-01-24 22:27:17,478] [INFO]: 52566 root Program started
+[2023-01-24 22:27:21,375] [INFO]: 52566 root <function all_tasks at 0x117792700>
+[2023-01-24 22:27:25,093] [INFO]: 52566 root photos/file_123.jpg
+[2023-01-24 22:27:30,869] [INFO]: 52566 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:27:30,875] [INFO]: 52566 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:27:30,876] [INFO]: 52566 root cloned
+[2023-01-24 22:27:30,877] [INFO]: 52566 root Building the style transfer model..
+[2023-01-24 22:27:32,142] [INFO]: 52566 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:27:32,143] [INFO]: 52566 root Optimizing..
+[2023-01-24 22:28:09,929] [INFO]: 52566 root Style Loss : 50.870255 Content Loss : 11.549884
+[2023-01-24 22:29:00,086] [INFO]: 52566 root Style Loss : 15.352388 Content Loss : 8.972795
+[2023-01-24 22:29:41,811] [INFO]: 52566 root Style Loss : 8.591853 Content Loss : 7.263832
+[2023-01-24 22:30:19,024] [INFO]: 52566 root Style Loss : 4.973033 Content Loss : 6.535366
+[2023-01-24 22:30:36,334] [INFO]: 52566 root Tensor converted to image
+[2023-01-24 22:30:36,334] [INFO]: 52566 root run_style_transfer
+[2023-01-24 22:30:36,559] [ERROR]: 52566 TeleBot A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+[2023-01-24 22:32:26,186] [INFO]: 52826 root Model created
+[2023-01-24 22:32:26,187] [INFO]: 52826 root Program started
+[2023-01-24 22:32:29,869] [INFO]: 52826 root tasks: <function all_tasks at 0x1203fe700>
+[2023-01-24 22:32:33,260] [INFO]: 52826 root photos/file_123.jpg
+[2023-01-24 22:32:37,796] [INFO]: 52826 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:32:37,801] [INFO]: 52826 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:32:37,802] [INFO]: 52826 root cloned
+[2023-01-24 22:32:37,802] [INFO]: 52826 root Building the style transfer model..
+[2023-01-24 22:32:39,331] [INFO]: 52826 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:32:39,331] [INFO]: 52826 root Optimizing..
+[2023-01-24 22:33:14,170] [INFO]: 52826 root Style Loss : 53.960659 Content Loss : 11.647916
+[2023-01-24 22:33:50,918] [INFO]: 52826 root Style Loss : 14.949173 Content Loss : 8.894890
+[2023-01-24 22:34:30,096] [INFO]: 52826 root Style Loss : 8.451340 Content Loss : 7.229772
+[2023-01-24 22:35:09,717] [INFO]: 52826 root Style Loss : 4.949350 Content Loss : 6.515433
+[2023-01-24 22:35:27,639] [INFO]: 52826 root Tensor converted to image
+[2023-01-24 22:35:27,644] [ERROR]: 52826 root [Errno 2] No such file or directory: 'user_files/result_453169809'
+[2023-01-24 22:36:15,770] [INFO]: 52826 root Model created
+[2023-01-24 22:36:15,770] [INFO]: 52826 root Model created
+[2023-01-24 22:36:15,786] [INFO]: 52826 root Program started
+[2023-01-24 22:36:15,786] [INFO]: 52826 root Program started
+[2023-01-24 22:36:31,178] [ERROR]: 52826 root no running event loop
+[2023-01-24 22:36:31,178] [ERROR]: 52826 root no running event loop
+[2023-01-24 22:38:16,819] [INFO]: 52826 root Model created
+[2023-01-24 22:38:16,819] [INFO]: 52826 root Model created
+[2023-01-24 22:38:16,819] [INFO]: 52826 root Model created
+[2023-01-24 22:38:16,827] [INFO]: 52826 root Program started
+[2023-01-24 22:38:16,827] [INFO]: 52826 root Program started
+[2023-01-24 22:38:16,827] [INFO]: 52826 root Program started
+[2023-01-24 22:38:38,834] [ERROR]: 52826 root NO TASKS!!!!!
+[2023-01-24 22:38:38,834] [ERROR]: 52826 root NO TASKS!!!!!
+[2023-01-24 22:38:38,834] [ERROR]: 52826 root NO TASKS!!!!!
+[2023-01-24 22:38:45,157] [INFO]: 52826 root photos/file_123.jpg
+[2023-01-24 22:38:45,157] [INFO]: 52826 root photos/file_123.jpg
+[2023-01-24 22:38:45,157] [INFO]: 52826 root photos/file_123.jpg
+[2023-01-24 22:38:50,199] [INFO]: 52826 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:38:50,199] [INFO]: 52826 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:38:50,199] [INFO]: 52826 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:38:50,206] [INFO]: 52826 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:38:50,206] [INFO]: 52826 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:38:50,206] [INFO]: 52826 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:38:50,206] [INFO]: 52826 root cloned
+[2023-01-24 22:38:50,206] [INFO]: 52826 root cloned
+[2023-01-24 22:38:50,206] [INFO]: 52826 root cloned
+[2023-01-24 22:38:50,207] [INFO]: 52826 root Building the style transfer model..
+[2023-01-24 22:38:50,207] [INFO]: 52826 root Building the style transfer model..
+[2023-01-24 22:38:50,207] [INFO]: 52826 root Building the style transfer model..
+[2023-01-24 22:38:51,866] [INFO]: 52826 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:38:51,866] [INFO]: 52826 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:38:51,866] [INFO]: 52826 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:38:51,867] [INFO]: 52826 root Optimizing..
+[2023-01-24 22:38:51,867] [INFO]: 52826 root Optimizing..
+[2023-01-24 22:38:51,867] [INFO]: 52826 root Optimizing..
+[2023-01-24 22:38:54,070] [ERROR]: 52826 root NO TASKS!!!!!
+[2023-01-24 22:38:54,070] [ERROR]: 52826 root NO TASKS!!!!!
+[2023-01-24 22:38:54,070] [ERROR]: 52826 root NO TASKS!!!!!
+[2023-01-24 22:38:59,086] [INFO]: 52826 root photos/file_139.jpg
+[2023-01-24 22:38:59,086] [INFO]: 52826 root photos/file_139.jpg
+[2023-01-24 22:38:59,086] [INFO]: 52826 root photos/file_139.jpg
+[2023-01-24 22:39:04,744] [INFO]: 52826 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:39:04,744] [INFO]: 52826 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:39:04,744] [INFO]: 52826 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:39:04,764] [INFO]: 52826 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:39:04,764] [INFO]: 52826 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:39:04,764] [INFO]: 52826 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:39:04,765] [INFO]: 52826 root cloned
+[2023-01-24 22:39:04,765] [INFO]: 52826 root cloned
+[2023-01-24 22:39:04,765] [INFO]: 52826 root cloned
+[2023-01-24 22:39:04,766] [INFO]: 52826 root Building the style transfer model..
+[2023-01-24 22:39:04,766] [INFO]: 52826 root Building the style transfer model..
+[2023-01-24 22:39:04,766] [INFO]: 52826 root Building the style transfer model..
+[2023-01-24 22:39:09,849] [INFO]: 52826 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:39:09,849] [INFO]: 52826 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:39:09,849] [INFO]: 52826 root <class 'list'><class 'torch.nn.modules.container.Sequential'><class 'list'>
+[2023-01-24 22:39:09,851] [INFO]: 52826 root Optimizing..
+[2023-01-24 22:39:09,851] [INFO]: 52826 root Optimizing..
+[2023-01-24 22:39:09,851] [INFO]: 52826 root Optimizing..
+[2023-01-24 22:40:18,702] [INFO]: 53296 root Model created
+[2023-01-24 22:40:18,702] [INFO]: 53296 root Program started
+[2023-01-24 22:40:26,805] [ERROR]: 53296 root NO TASKS!!!!!
+[2023-01-24 22:40:35,804] [INFO]: 53296 root photos/file_123.jpg
+[2023-01-24 22:40:40,359] [INFO]: 53296 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:40:40,365] [INFO]: 53296 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:40:40,365] [INFO]: 53296 root cloned
+[2023-01-24 22:40:40,366] [INFO]: 53296 root Building the style transfer model..
+[2023-01-24 22:40:41,883] [INFO]: 53296 root Optimizing..
+[2023-01-24 22:41:14,475] [INFO]: 53296 root Style Loss : 49.047600 Content Loss : 11.712556
+[2023-01-24 22:41:48,868] [INFO]: 53296 root Style Loss : 15.895245 Content Loss : 9.154611
+[2023-01-24 22:42:29,428] [INFO]: 53296 root Style Loss : 9.027213 Content Loss : 7.362025
+[2023-01-24 22:43:04,680] [INFO]: 53296 root Style Loss : 5.228747 Content Loss : 6.567264
+[2023-01-24 22:43:18,812] [INFO]: 53296 root Tensor converted to image
+[2023-01-24 22:43:18,816] [ERROR]: 53296 root [Errno 2] No such file or directory: 'user_files/result_453169809'
+[2023-01-24 22:44:07,038] [INFO]: 53296 root Model created
+[2023-01-24 22:44:07,038] [INFO]: 53296 root Model created
+[2023-01-24 22:44:07,049] [INFO]: 53296 root Program started
+[2023-01-24 22:44:07,049] [INFO]: 53296 root Program started
+[2023-01-24 22:44:33,261] [ERROR]: 53296 root NO TASKS!!!!!
+[2023-01-24 22:44:33,261] [ERROR]: 53296 root NO TASKS!!!!!
+[2023-01-24 22:44:34,784] [INFO]: 53296 root photos/file_123.jpg
+[2023-01-24 22:44:34,784] [INFO]: 53296 root photos/file_123.jpg
+[2023-01-24 22:44:41,161] [INFO]: 53296 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:44:41,161] [INFO]: 53296 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:44:41,168] [INFO]: 53296 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:44:41,168] [INFO]: 53296 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:44:41,168] [INFO]: 53296 root cloned
+[2023-01-24 22:44:41,168] [INFO]: 53296 root cloned
+[2023-01-24 22:44:41,169] [INFO]: 53296 root Building the style transfer model..
+[2023-01-24 22:44:41,169] [INFO]: 53296 root Building the style transfer model..
+[2023-01-24 22:44:42,400] [INFO]: 53296 root Optimizing..
+[2023-01-24 22:44:42,400] [INFO]: 53296 root Optimizing..
+[2023-01-24 22:45:15,532] [INFO]: 53296 root Style Loss : 49.697739 Content Loss : 11.768928
+[2023-01-24 22:45:15,532] [INFO]: 53296 root Style Loss : 49.697739 Content Loss : 11.768928
+[2023-01-24 22:45:49,040] [INFO]: 53296 root Style Loss : 20.223192 Content Loss : 8.965799
+[2023-01-24 22:45:49,040] [INFO]: 53296 root Style Loss : 20.223192 Content Loss : 8.965799
+[2023-01-24 22:46:23,174] [INFO]: 53296 root Style Loss : 8.717318 Content Loss : 7.299469
+[2023-01-24 22:46:23,174] [INFO]: 53296 root Style Loss : 8.717318 Content Loss : 7.299469
+[2023-01-24 22:46:57,292] [INFO]: 53296 root Style Loss : 5.005805 Content Loss : 6.524566
+[2023-01-24 22:46:57,292] [INFO]: 53296 root Style Loss : 5.005805 Content Loss : 6.524566
+[2023-01-24 22:47:11,046] [INFO]: 53296 root Tensor converted to image
+[2023-01-24 22:47:11,046] [INFO]: 53296 root Tensor converted to image
+[2023-01-24 22:48:09,409] [ERROR]: 53296 root NO TASKS!!!!!
+[2023-01-24 22:48:09,409] [ERROR]: 53296 root NO TASKS!!!!!
+[2023-01-24 22:48:13,159] [INFO]: 53296 root photos/file_142.jpg
+[2023-01-24 22:48:13,159] [INFO]: 53296 root photos/file_142.jpg
+[2023-01-24 22:48:22,439] [INFO]: 53296 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:48:22,439] [INFO]: 53296 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:48:22,450] [INFO]: 53296 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:48:22,450] [INFO]: 53296 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:48:22,451] [INFO]: 53296 root cloned
+[2023-01-24 22:48:22,451] [INFO]: 53296 root cloned
+[2023-01-24 22:48:22,451] [INFO]: 53296 root Building the style transfer model..
+[2023-01-24 22:48:22,451] [INFO]: 53296 root Building the style transfer model..
+[2023-01-24 22:48:24,676] [INFO]: 53296 root Optimizing..
+[2023-01-24 22:48:24,676] [INFO]: 53296 root Optimizing..
+[2023-01-24 22:49:29,092] [INFO]: 53296 root Style Loss : 47.562874 Content Loss : 14.279640
+[2023-01-24 22:49:29,092] [INFO]: 53296 root Style Loss : 47.562874 Content Loss : 14.279640
+[2023-01-24 22:50:59,926] [INFO]: 53296 root Style Loss : 21.232475 Content Loss : 12.317944
+[2023-01-24 22:50:59,926] [INFO]: 53296 root Style Loss : 21.232475 Content Loss : 12.317944
+[2023-01-24 22:52:25,346] [INFO]: 53296 root Style Loss : 11.663637 Content Loss : 11.397771
+[2023-01-24 22:52:25,346] [INFO]: 53296 root Style Loss : 11.663637 Content Loss : 11.397771
+[2023-01-24 22:53:58,380] [INFO]: 53296 root Style Loss : 7.356359 Content Loss : 10.722341
+[2023-01-24 22:53:58,380] [INFO]: 53296 root Style Loss : 7.356359 Content Loss : 10.722341
+[2023-01-24 22:54:27,799] [INFO]: 53296 root Tensor converted to image
+[2023-01-24 22:54:27,799] [INFO]: 53296 root Tensor converted to image
+[2023-01-24 22:55:10,430] [ERROR]: 53296 root NO TASKS!!!!!
+[2023-01-24 22:55:10,430] [ERROR]: 53296 root NO TASKS!!!!!
+[2023-01-24 22:56:07,297] [INFO]: 53296 root photos/file_144.jpg
+[2023-01-24 22:56:07,297] [INFO]: 53296 root photos/file_144.jpg
+[2023-01-24 22:56:12,836] [INFO]: 53296 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:56:12,836] [INFO]: 53296 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 22:56:12,855] [INFO]: 53296 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:56:12,855] [INFO]: 53296 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 22:56:12,868] [INFO]: 53296 root cloned
+[2023-01-24 22:56:12,868] [INFO]: 53296 root cloned
+[2023-01-24 22:56:12,869] [INFO]: 53296 root Building the style transfer model..
+[2023-01-24 22:56:12,869] [INFO]: 53296 root Building the style transfer model..
+[2023-01-24 22:56:24,836] [INFO]: 53296 root Optimizing..
+[2023-01-24 22:56:24,836] [INFO]: 53296 root Optimizing..
+[2023-01-24 23:00:26,351] [INFO]: 54084 root Model created
+[2023-01-24 23:00:26,352] [INFO]: 54084 root Program started
+[2023-01-24 23:01:58,589] [ERROR]: 54084 root NO TASKS!!!!!
+[2023-01-24 23:02:00,290] [INFO]: 54084 root photos/file_146.jpg
+[2023-01-24 23:02:04,802] [INFO]: 54084 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 23:02:04,822] [INFO]: 54084 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 23:02:04,823] [INFO]: 54084 root cloned
+[2023-01-24 23:02:04,823] [INFO]: 54084 root Building the style transfer model..
+[2023-01-24 23:02:29,051] [INFO]: 54084 root Optimizing..
+[2023-01-24 23:04:42,002] [INFO]: 54279 root Model created
+[2023-01-24 23:04:42,002] [INFO]: 54279 root Program started
+[2023-01-24 23:04:47,733] [ERROR]: 54279 root NO TASKS!!!!!
+[2023-01-24 23:04:50,603] [INFO]: 54279 root photos/file_146.jpg
+[2023-01-24 23:04:57,870] [INFO]: 54279 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 23:04:57,899] [INFO]: 54279 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 23:04:57,900] [INFO]: 54279 root cloned
+[2023-01-24 23:04:57,900] [INFO]: 54279 root Building the style transfer model..
+[2023-01-24 23:05:00,430] [INFO]: 54279 root Optimizing..
+[2023-01-24 23:06:09,023] [INFO]: 54279 root Style Loss : 97.446060 Content Loss : 7.932973
+[2023-01-24 23:07:27,212] [INFO]: 54279 root Style Loss : 54.579437 Content Loss : 9.454469
+[2023-01-24 23:09:06,973] [INFO]: 54279 root Style Loss : 28.329733 Content Loss : 8.913159
+[2023-01-24 23:10:33,168] [INFO]: 54279 root Style Loss : 14.081930 Content Loss : 7.654499
+[2023-01-24 23:11:13,933] [INFO]: 54279 root Tensor converted to image
+[2023-01-24 23:12:31,100] [INFO]: 54549 root Model created
+[2023-01-24 23:12:31,101] [INFO]: 54549 root Program started
+[2023-01-24 23:12:49,660] [ERROR]: 54549 root NO TASKS!!!!!
+[2023-01-24 23:12:50,813] [INFO]: 54549 root photos/file_146.jpg
+[2023-01-24 23:12:56,019] [INFO]: 54549 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 23:12:56,047] [INFO]: 54549 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 23:12:56,047] [INFO]: 54549 root cloned
+[2023-01-24 23:12:56,047] [INFO]: 54549 root Building the style transfer model..
+[2023-01-24 23:12:58,992] [INFO]: 54549 root Optimizing..
+[2023-01-24 23:14:10,699] [INFO]: 54549 root Style Loss : 98.523399 Content Loss : 7.904987
+[2023-01-24 23:15:38,156] [INFO]: 54549 root Style Loss : 56.273823 Content Loss : 9.463854
+[2023-01-24 23:17:16,047] [INFO]: 54549 root Style Loss : 28.103363 Content Loss : 8.911080
+[2023-01-24 23:19:13,408] [INFO]: 54549 root Style Loss : 14.272983 Content Loss : 7.736531
+[2023-01-24 23:20:53,306] [INFO]: 54549 root Style Loss : 7.769312 Content Loss : 6.326625
+[2023-01-24 23:22:20,603] [INFO]: 54549 root Style Loss : 4.555966 Content Loss : 5.568165
+[2023-01-24 23:23:49,112] [INFO]: 54549 root Style Loss : 2.427765 Content Loss : 5.089311
+[2023-01-24 23:25:29,984] [INFO]: 54549 root Style Loss : 1.275713 Content Loss : 4.724802
+[2023-01-24 23:27:04,352] [INFO]: 54549 root Style Loss : 0.750125 Content Loss : 4.418190
+[2023-01-24 23:28:26,677] [INFO]: 54549 root Style Loss : 0.510442 Content Loss : 4.183614
+[2023-01-24 23:30:07,340] [INFO]: 54549 root Style Loss : 0.395619 Content Loss : 4.007534
+[2023-01-24 23:31:44,365] [INFO]: 54549 root Style Loss : 0.343093 Content Loss : 3.873536
+[2023-01-24 23:33:09,644] [INFO]: 54549 root Style Loss : 0.315216 Content Loss : 3.772608
+[2023-01-24 23:34:46,557] [INFO]: 54549 root Style Loss : 0.297210 Content Loss : 3.694321
+[2023-01-24 23:36:10,112] [INFO]: 54549 root Style Loss : 0.287588 Content Loss : 3.635386
+[2023-01-24 23:37:34,656] [INFO]: 54549 root Style Loss : 0.280658 Content Loss : 3.588057
+[2023-01-24 23:39:10,992] [INFO]: 54549 root Style Loss : 0.276540 Content Loss : 3.550219
+[2023-01-24 23:41:06,901] [INFO]: 54549 root Style Loss : 0.271016 Content Loss : 3.518346
+[2023-01-24 23:42:38,849] [INFO]: 54549 root Style Loss : 0.267758 Content Loss : 3.493667
+[2023-01-24 23:44:21,407] [INFO]: 54549 root Style Loss : 0.264433 Content Loss : 3.473233
+[2023-01-24 23:45:03,086] [INFO]: 54549 root Tensor converted to image
+[2023-01-24 23:46:54,382] [ERROR]: 54549 root NO TASKS!!!!!
+[2023-01-24 23:46:56,591] [INFO]: 54549 root photos/file_150.jpg
+[2023-01-24 23:47:38,267] [INFO]: 54549 root Uploaded file user_files/style_453169809.jpg
+[2023-01-24 23:47:38,292] [INFO]: 54549 root Uploaded file user_files/object_453169809.jpg
+[2023-01-24 23:47:38,293] [INFO]: 54549 root cloned
+[2023-01-24 23:47:38,294] [INFO]: 54549 root Building the style transfer model..
+[2023-01-24 23:47:41,770] [INFO]: 54549 root Optimizing..
+[2023-01-24 23:49:21,295] [INFO]: 54549 root Style Loss : 55.897762 Content Loss : 13.208632
+[2023-01-24 23:51:15,112] [INFO]: 54549 root Style Loss : 24.431013 Content Loss : 11.710898
+[2023-01-24 23:53:12,401] [INFO]: 54549 root Style Loss : 14.078113 Content Loss : 10.589159
+[2023-01-24 23:55:06,183] [INFO]: 54549 root Style Loss : 7.621110 Content Loss : 10.063792
+[2023-01-24 23:56:51,671] [INFO]: 54549 root Style Loss : 4.277214 Content Loss : 9.486433
+[2023-01-24 23:58:26,058] [INFO]: 54549 root Style Loss : 2.443579 Content Loss : 8.966989
+[2023-01-25 00:00:10,970] [INFO]: 54549 root Style Loss : 1.575676 Content Loss : 8.539215
+[2023-01-25 00:01:41,273] [INFO]: 54549 root Style Loss : 1.105233 Content Loss : 8.218280
+[2023-01-25 00:03:08,745] [INFO]: 54549 root Style Loss : 0.854756 Content Loss : 7.987487
+[2023-01-25 00:04:38,864] [INFO]: 54549 root Style Loss : 0.713801 Content Loss : 7.830931
+[2023-01-25 00:06:04,171] [INFO]: 54549 root Style Loss : 0.636535 Content Loss : 7.701365
+[2023-01-25 00:07:32,370] [INFO]: 54549 root Style Loss : 0.591472 Content Loss : 7.605379
+[2023-01-25 00:08:56,339] [INFO]: 54549 root Style Loss : 0.566114 Content Loss : 7.520982
+[2023-01-25 00:10:31,592] [INFO]: 54549 root Style Loss : 0.545449 Content Loss : 7.455643
+[2023-01-25 00:12:08,485] [INFO]: 54549 root Style Loss : 0.540913 Content Loss : 7.394017
+[2023-01-25 00:13:31,430] [INFO]: 54549 root Style Loss : 0.531347 Content Loss : 7.352451
+[2023-01-25 00:15:00,355] [INFO]: 54549 root Style Loss : 0.535099 Content Loss : 7.315858
+[2023-01-25 00:16:35,785] [INFO]: 54549 root Style Loss : 0.534335 Content Loss : 7.270757
+[2023-01-25 00:17:57,891] [INFO]: 54549 root Style Loss : 0.520679 Content Loss : 7.247128
+[2023-01-25 00:19:21,708] [INFO]: 54549 root Style Loss : 0.521621 Content Loss : 7.226488
+[2023-01-25 00:20:00,352] [INFO]: 54549 root Tensor converted to image
+[2023-01-25 14:07:08,337] [INFO]: 59413 root Model created
+[2023-01-25 14:07:08,337] [INFO]: 59413 root Program started
+[2023-01-25 14:30:52,670] [INFO]: 59916 root Model created
+[2023-01-25 14:30:52,670] [INFO]: 59916 root Program started
+[2023-01-25 14:31:16,141] [ERROR]: 59916 root NO TASKS!!!!!
+[2023-01-25 14:31:23,199] [INFO]: 59916 root photos/file_152.jpg
+[2023-01-25 14:31:32,484] [INFO]: 59916 root Uploaded file user_files/style_453169809.jpg, size: (700, 700)
+[2023-01-25 14:31:32,509] [INFO]: 59916 root Uploaded file user_files/object_453169809.jpg, size: (700, 700)
+[2023-01-25 14:31:32,509] [INFO]: 59916 root cloned
+[2023-01-25 14:31:32,511] [ERROR]: 59916 root no running event loop
+[2023-01-25 14:35:35,205] [INFO]: 60046 root Model created
+[2023-01-25 14:35:35,205] [INFO]: 60046 root Program started
+[2023-01-25 14:35:47,480] [ERROR]: 60046 root NO TASKS!!!!!
+[2023-01-25 14:35:54,127] [INFO]: 60046 root photos/file_154.jpg
+[2023-01-25 14:35:58,386] [INFO]: 60046 root Uploaded file user_files/style_453169809.jpg, size: (700, 700)
+[2023-01-25 14:35:58,410] [INFO]: 60046 root Uploaded file user_files/object_453169809.jpg, size: (700, 700)
+[2023-01-25 14:35:58,411] [INFO]: 60046 root cloned
+[2023-01-25 14:35:58,412] [ERROR]: 60046 root no running event loop
+[2023-01-25 14:44:33,328] [INFO]: 60301 root Model created
+[2023-01-25 14:44:33,329] [INFO]: 60301 root Program started
+[2023-01-25 14:44:44,155] [INFO]: 60301 root photos/file_156.jpg
+[2023-01-25 14:44:48,097] [INFO]: 60301 root Uploaded file user_files/style_453169809.jpg, size: (700, 700)
+[2023-01-25 14:44:48,120] [INFO]: 60301 root Uploaded file user_files/object_453169809.jpg, size: (700, 700)
+[2023-01-25 14:44:48,120] [INFO]: 60301 root Building the style transfer model..
+[2023-01-25 14:44:52,069] [INFO]: 60301 root Optimizing..
+[2023-01-25 14:46:03,895] [INFO]: 60301 root Run : [50] Style Loss : 59.519585 Content Loss : 12.456029
+[2023-01-25 14:47:30,192] [INFO]: 60301 root Run : [100] Style Loss : 32.762615 Content Loss : 11.910615
+[2023-01-25 14:48:55,146] [INFO]: 60301 root Run : [150] Style Loss : 17.066242 Content Loss : 11.694437
+[2023-01-25 14:50:21,021] [INFO]: 60301 root Run : [200] Style Loss : 7.905667 Content Loss : 11.272533
+[2023-01-25 14:50:55,288] [INFO]: 60301 root Tensor converted to image
+[2023-01-25 15:04:05,990] [INFO]: 60301 root photos/file_146.jpg
+[2023-01-25 15:04:19,816] [INFO]: 60301 root Uploaded file user_files/style_453169809.jpg, size: (700, 700)
+[2023-01-25 15:04:19,846] [INFO]: 60301 root Uploaded file user_files/object_453169809.jpg, size: (700, 700)
+[2023-01-25 15:04:19,847] [INFO]: 60301 root Building the style transfer model..
+[2023-01-25 15:04:22,747] [INFO]: 60301 root Optimizing..
+[2023-01-25 15:06:06,266] [INFO]: 60301 root Run : [50] Style Loss : 97.657097 Content Loss : 8.084086
+[2023-01-25 15:13:29,749] [INFO]: 61192 root Model created
+[2023-01-25 15:13:29,749] [INFO]: 61192 root Model created
+[2023-01-25 15:13:29,750] [INFO]: 61192 root Program started
+[2023-01-25 15:13:29,750] [INFO]: 61192 root Program started
+[2023-01-25 15:13:39,647] [INFO]: 61192 root photos/file_146.jpg
+[2023-01-25 15:13:39,647] [INFO]: 61192 root photos/file_146.jpg
+[2023-01-25 15:13:45,003] [INFO]: 61192 root Uploaded file user_files/style_453169809.jpg, size: (700, 700)
+[2023-01-25 15:13:45,003] [INFO]: 61192 root Uploaded file user_files/style_453169809.jpg, size: (700, 700)
+[2023-01-25 15:13:45,029] [INFO]: 61192 root Uploaded file user_files/object_453169809.jpg, size: (700, 700)
+[2023-01-25 15:13:45,029] [INFO]: 61192 root Uploaded file user_files/object_453169809.jpg, size: (700, 700)
+[2023-01-25 15:13:45,030] [INFO]: 61192 root Building the style transfer model..
+[2023-01-25 15:13:45,030] [INFO]: 61192 root Building the style transfer model..
+[2023-01-25 15:13:49,238] [INFO]: 61192 root Optimizing..
+[2023-01-25 15:13:49,238] [INFO]: 61192 root Optimizing..
+[2023-01-25 15:13:49,349] [ERROR]: 61192 TeleBot A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message identifier is not specified
+[2023-01-25 15:13:49,349] [ERROR]: 61192 TeleBot A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message identifier is not specified
+[2023-01-25 15:14:32,025] [INFO]: 61258 root Model created
+[2023-01-25 15:14:32,025] [INFO]: 61258 root Program started
+[2023-01-25 15:14:40,442] [INFO]: 61258 root photos/file_146.jpg
+[2023-01-25 15:14:47,275] [INFO]: 61258 root Uploaded file user_files/style_453169809.jpg, size: (700, 700)
+[2023-01-25 15:14:47,295] [INFO]: 61258 root Uploaded file user_files/object_453169809.jpg, size: (700, 700)
+[2023-01-25 15:14:47,297] [INFO]: 61258 root Building the style transfer model..
+[2023-01-25 15:14:50,543] [INFO]: 61258 root Optimizing..
+[2023-01-25 15:14:50,648] [ERROR]: 61258 TeleBot A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message can't be edited
+[2023-01-25 15:15:59,658] [INFO]: 61311 root Model created
+[2023-01-25 15:15:59,658] [INFO]: 61311 root Program started
+[2023-01-25 15:16:22,217] [INFO]: 61311 root photos/file_146.jpg
+[2023-01-25 15:16:28,174] [INFO]: 61311 root Uploaded file user_files/style_453169809.jpg, size: (700, 700)
+[2023-01-25 15:16:28,200] [INFO]: 61311 root Uploaded file user_files/object_453169809.jpg, size: (700, 700)
+[2023-01-25 15:16:28,202] [INFO]: 61311 root Building the style transfer model..
+[2023-01-25 15:16:32,589] [INFO]: 61311 root Optimizing..
+[2023-01-25 15:17:48,713] [INFO]: 61311 root Run : 50 Style Loss : 97.405014 Content Loss : 8.026587
+[2023-01-25 15:19:28,003] [INFO]: 61311 root Run : 100 Style Loss : 55.573036 Content Loss : 9.868029
+[2023-01-25 15:21:12,737] [INFO]: 61311 root Run : 150 Style Loss : 27.575388 Content Loss : 9.033323
+[2023-01-25 15:22:56,234] [INFO]: 61311 root Run : 200 Style Loss : 13.771626 Content Loss : 7.641745
+[2023-01-25 15:23:39,832] [INFO]: 61311 root Tensor converted to image
+[2023-01-25 15:36:17,524] [INFO]: 61311 root photos/file_162.jpg
+[2023-01-25 15:36:21,519] [INFO]: 61311 root Uploaded file user_files/style_453169809.jpg, size: (587, 700)
+[2023-01-25 15:36:21,535] [INFO]: 61311 root Uploaded file user_files/object_453169809.jpg, size: (587, 700)
+[2023-01-25 15:36:21,536] [INFO]: 61311 root Building the style transfer model..
+[2023-01-25 15:36:23,760] [INFO]: 61311 root Optimizing..
+[2023-01-25 15:37:24,119] [INFO]: 61311 root Run : 50 Style Loss : 84.637131 Content Loss : 14.367737
+[2023-01-25 15:38:30,540] [INFO]: 61311 root Run : 100 Style Loss : 13.772889 Content Loss : 12.842172
+[2023-01-25 15:39:48,129] [INFO]: 61311 root Run : 150 Style Loss : 6.790488 Content Loss : 11.024868
+[2023-01-25 15:40:57,661] [INFO]: 61311 root Run : 200 Style Loss : 4.249282 Content Loss : 10.220111
+[2023-01-25 15:41:26,456] [INFO]: 61311 root Tensor converted to image
+[2023-01-25 15:45:19,129] [INFO]: 62179 root Model created
+[2023-01-25 15:45:19,129] [INFO]: 62179 root Program started
+[2023-01-25 15:46:33,830] [INFO]: 62179 root photos/file_164.jpg
+[2023-01-25 15:46:36,736] [INFO]: 62179 root Uploaded file user_files/style_453169809.jpg, size: (587, 800)
+[2023-01-25 15:46:36,747] [INFO]: 62179 root Uploaded file user_files/object_453169809.jpg, size: (587, 800)
+[2023-01-25 15:46:36,748] [INFO]: 62179 root Building the style transfer model..
+[2023-01-25 15:46:39,599] [INFO]: 62179 root Optimizing..
+[2023-01-25 15:47:52,253] [INFO]: 62179 root Run : 50 Style Loss : 81.920082 Content Loss : 14.622723
+[2023-01-25 15:49:52,602] [INFO]: 62179 root Run : 100 Style Loss : 12.654839 Content Loss : 12.759320
+[2023-01-25 15:51:38,944] [INFO]: 62179 root Run : 150 Style Loss : 6.201104 Content Loss : 11.013785
+[2023-01-25 15:57:25,428] [INFO]: 62781 root Model created
+[2023-01-25 15:57:25,428] [INFO]: 62781 root Program started
+[2023-01-25 15:57:39,943] [INFO]: 62781 root photos/file_164.jpg
+[2023-01-25 15:57:44,701] [INFO]: 62781 root [445, 536]
+[2023-01-25 15:57:44,716] [INFO]: 62781 root Uploaded file user_files/style_453169809.jpg, size: (445, 536)
+[2023-01-25 15:57:44,725] [INFO]: 62781 root Uploaded file user_files/object_453169809.jpg, size: (445, 536)
+[2023-01-25 15:57:44,726] [INFO]: 62781 root Building the style transfer model..
+[2023-01-25 15:57:45,828] [INFO]: 62781 root Optimizing..
+[2023-01-25 15:58:18,605] [INFO]: 62781 root Run : 50 Style Loss : 85.493942 Content Loss : 13.451494
+[2023-01-25 15:58:53,065] [INFO]: 62781 root Run : 100 Style Loss : 21.743410 Content Loss : 12.995877
+[2023-01-25 15:59:26,986] [INFO]: 62781 root Run : 150 Style Loss : 12.535109 Content Loss : 12.060889
+[2023-01-25 16:00:00,713] [INFO]: 62781 root Run : 200 Style Loss : 8.301486 Content Loss : 11.251266
+[2023-01-25 16:00:14,297] [INFO]: 62781 root Tensor converted to image
+[2023-01-25 16:00:44,437] [INFO]: 62891 root Model created
+[2023-01-25 16:00:44,437] [INFO]: 62891 root Program started
+[2023-01-25 16:00:57,856] [INFO]: 62891 root photos/file_165.jpg
+[2023-01-25 16:01:03,135] [INFO]: 62891 root [445, 536]
+[2023-01-25 16:01:03,150] [INFO]: 62891 root Uploaded file user_files/style_453169809.jpg, size: (445, 536)
+[2023-01-25 16:01:03,158] [INFO]: 62891 root Uploaded file user_files/object_453169809.jpg, size: (445, 536)
+[2023-01-25 16:01:03,159] [INFO]: 62891 root Building the style transfer model..
+[2023-01-25 16:01:04,219] [INFO]: 62891 root Optimizing..
+[2023-01-25 16:01:36,608] [INFO]: 62891 root Run : 50 Style Loss : 78.841652 Content Loss : 13.393583
+[2023-01-25 16:02:10,008] [INFO]: 62891 root Run : 100 Style Loss : 22.702854 Content Loss : 13.009315
+[2023-01-25 16:02:43,818] [INFO]: 62891 root Run : 150 Style Loss : 12.711049 Content Loss : 12.036533
+[2023-01-25 16:03:17,675] [INFO]: 62891 root Run : 200 Style Loss : 8.256532 Content Loss : 11.243302
+[2023-01-25 16:03:31,302] [INFO]: 62891 root Tensor converted to image
+[2023-01-25 16:04:55,891] [INFO]: 63000 root Model created
+[2023-01-25 16:04:55,891] [INFO]: 63000 root Program started
+[2023-01-25 16:05:26,853] [INFO]: 63000 root photos/file_166.jpg
+[2023-01-25 16:05:32,831] [INFO]: 63000 root [445, 536]
+[2023-01-25 16:05:32,847] [INFO]: 63000 root Uploaded file user_files/style_453169809.jpg, size: (445, 536)
+[2023-01-25 16:05:32,855] [INFO]: 63000 root Uploaded file user_files/object_453169809.jpg, size: (445, 536)
+[2023-01-25 16:05:32,856] [INFO]: 63000 root Building the style transfer model..
+[2023-01-25 16:05:34,229] [INFO]: 63000 root Optimizing..
+[2023-01-25 16:06:06,748] [INFO]: 63000 root Run : 50 Style Loss : 85.743027 Content Loss : 12.568237
+[2023-01-25 16:06:40,422] [INFO]: 63000 root Run : 100 Style Loss : 22.098408 Content Loss : 12.087010
+[2023-01-25 16:07:14,288] [INFO]: 63000 root Run : 150 Style Loss : 12.578295 Content Loss : 11.150146
+[2023-01-25 16:07:48,017] [INFO]: 63000 root Run : 200 Style Loss : 8.378910 Content Loss : 10.408997
+[2023-01-25 16:08:21,992] [INFO]: 63000 root Run : 250 Style Loss : 5.338428 Content Loss : 10.109274
+[2023-01-25 16:08:55,589] [INFO]: 63000 root Run : 300 Style Loss : 3.630666 Content Loss : 9.872277
+[2023-01-25 16:09:09,182] [INFO]: 63000 root Tensor converted to image
+[2023-01-25 16:10:07,685] [INFO]: 63000 root photos/file_168.jpg
+[2023-01-25 16:10:17,147] [INFO]: 63000 root [959, 1280]
+[2023-01-25 16:10:17,168] [INFO]: 63000 root Uploaded file user_files/style_453169809.jpg, size: (1000, 1000)
+[2023-01-25 16:10:17,197] [INFO]: 63000 root Uploaded file user_files/object_453169809.jpg, size: (1000, 1000)
+[2023-01-25 16:10:17,198] [INFO]: 63000 root Building the style transfer model..
+[2023-01-25 16:10:25,873] [INFO]: 63000 root Optimizing..
+[2023-01-25 16:14:20,022] [INFO]: 63000 root Run : 50 Style Loss : 367.848663 Content Loss : 6.690757
+[2023-01-25 16:18:39,986] [INFO]: 63000 root Run : 100 Style Loss : 81.899391 Content Loss : 5.995599
+[2023-01-25 16:25:29,600] [INFO]: 63000 root Run : 150 Style Loss : 14.453339 Content Loss : 6.453203
+[2023-01-25 16:31:38,475] [INFO]: 63000 root Run : 200 Style Loss : 2.551688 Content Loss : 4.554017
+[2023-01-25 16:37:40,426] [INFO]: 63000 root Run : 250 Style Loss : 1.285480 Content Loss : 3.413368
+[2023-01-25 16:43:40,772] [INFO]: 63000 root Run : 300 Style Loss : 0.937591 Content Loss : 2.834841
+[2023-01-25 16:46:06,795] [INFO]: 63000 root Tensor converted to image
+[2023-01-25 16:47:08,044] [INFO]: 64713 root Model created
+[2023-01-25 16:47:08,045] [INFO]: 64713 root Program started
+[2023-01-25 16:47:13,911] [INFO]: 64713 root photos/file_143.jpg
+[2023-01-25 16:47:32,520] [INFO]: 64713 root [450, 800]
+[2023-01-25 16:47:32,547] [INFO]: 64713 root Uploaded file user_files/style_453169809.jpg, size: (450, 800)
+[2023-01-25 16:47:32,555] [INFO]: 64713 root Uploaded file user_files/object_453169809.jpg, size: (450, 800)
+[2023-01-25 16:47:32,555] [INFO]: 64713 root Building the style transfer model..
+[2023-01-25 16:47:34,050] [INFO]: 64713 root Optimizing..
+[2023-01-25 16:48:17,218] [INFO]: 64713 root Run : 50 Style Loss : 182.276337 Content Loss : 7.379929
+[2023-01-25 16:49:01,826] [INFO]: 64713 root Run : 100 Style Loss : 90.131264 Content Loss : 8.438021
+[2023-01-25 16:49:47,746] [INFO]: 64713 root Run : 150 Style Loss : 31.529049 Content Loss : 9.982823
+[2023-01-25 16:50:34,017] [INFO]: 64713 root Run : 200 Style Loss : 9.180862 Content Loss : 7.842781
+[2023-01-25 16:50:52,708] [INFO]: 64713 root Tensor converted to image

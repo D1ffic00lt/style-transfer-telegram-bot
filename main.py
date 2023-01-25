@@ -7,9 +7,9 @@ import asyncio
 
 from config import (
     TOKEN, FORMAT,
-    DATE_FORMAT, LOG_PATH
+    DATE_FORMAT, LOG_PATH, NUM_STEPS
 )
-from modules.model.model import StyleModel
+from modules.model import StyleModel
 
 warnings.filterwarnings("ignore")
 
@@ -21,19 +21,18 @@ handler = logging.FileHandler(LOG_PATH, mode='+a')
 handler.setFormatter(logging.Formatter(FORMAT))
 logging.getLogger().addHandler(handler)
 
-model = StyleModel()
+model = StyleModel(bot)
 
 logging.info("Program started")
 
 
 @bot.message_handler(commands=["start", "convert"])
 def start(message: telebot.types.Message):
-    try:
-        logging.info(f"tasks: {asyncio.all_tasks()}")
-    except RuntimeError:
-        logging.error("NO TASKS!!!!!")
-    bot.send_message(message.chat.id, "Отправьте стиль!")
-    bot.register_next_step_handler(message, get_style)
+    if model.active_tasks >= 1:
+        bot.send_message(message.chat.id, "Обработка уже выполняется!")
+    else:
+        bot.send_message(message.chat.id, "Отправьте стиль!")
+        bot.register_next_step_handler(message, get_style)
 
 
 def get_style(message: telebot.types.Message):
@@ -62,19 +61,19 @@ def get_object(message: telebot.types.Message):
     with open('user_files/' + "object_" + str(message.chat.id) + ".jpg", 'wb') as new_file:
         new_file.write(downloaded_file)
 
-    bot.send_message(message.chat.id, "Обработка")
+    message_from_bot = bot.send_message(message.chat.id, "Обработка")
 
     image_shape = list(cv2.imread(f"user_files/object_{message.chat.id}.jpg").shape[:2])
-
+    logging.info(image_shape)
     style_img = model.image_loader(f"user_files/style_{message.chat.id}.jpg", image_shape)
     content_img = model.image_loader(f"user_files/object_{message.chat.id}.jpg", image_shape)
 
     input_img = content_img.clone()
-    logging.info("cloned")
     output = asyncio.run(
         model.run_style_transfer(
             content_img, style_img,
-            input_img, num_steps=1000
+            input_img, num_steps=NUM_STEPS,
+            message_id=message_from_bot.id, chat_id=message.chat.id
         )
     )
     output = model.imshow(output)
@@ -87,8 +86,6 @@ def get_object(message: telebot.types.Message):
         os.remove(f"user_files/result_{message.chat.id}.jpg")
     except FileNotFoundError:
         pass
-    # asyncio.run(model.queue.join())
-    # print(model.queue.())
 
 
 if __name__ == '__main__':
