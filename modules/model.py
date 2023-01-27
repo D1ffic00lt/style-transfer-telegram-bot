@@ -13,7 +13,7 @@ from modules.loss import Normalization, ContentLoss, StyleLoss
 
 
 class StyleModel(object):
-    MAX_IMG_SIZE = (600, 600)
+    MAX_IMG_SIZE = (650, 650)
     CNN_NORMALIZATION_MEAN = torch.tensor([0.485, 0.456, 0.406])
     CNN_NORMALIZATION_STD = torch.tensor([0.229, 0.224, 0.225])
     RESIZE_IMAGES = True
@@ -158,7 +158,7 @@ class StyleModel(object):
                 loss.backward()
 
                 run[0] += 1
-                if run[0] % 50 == 0:
+                if run[0] % 10 == 0:
                     logging.info('Run : {} Style Loss : {:4f} Content Loss : {:4f}'.format(
                         run[0], style_score.item(), content_score.item()
                         )
@@ -168,7 +168,7 @@ class StyleModel(object):
                 return style_score + content_score
 
             optimizer.step(closure)
-
+        self.bot.edit_message_text("Обработка окончена", chat_id, message_id)
         with torch.no_grad():
             input_img.clamp_(0, 1)
         self.active_tasks -= 1
