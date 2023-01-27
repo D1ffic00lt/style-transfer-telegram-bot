@@ -13,22 +13,24 @@ from modules.loss import Normalization, ContentLoss, StyleLoss
 
 
 class StyleModel(object):
-    MAX_IMG_SIZE = (1000, 1000)
+    MAX_IMG_SIZE = (600, 600)
     CNN_NORMALIZATION_MEAN = torch.tensor([0.485, 0.456, 0.406])
     CNN_NORMALIZATION_STD = torch.tensor([0.229, 0.224, 0.225])
     RESIZE_IMAGES = True
+    MAX_WORKERS = 1
 
-    def __init__(self, bot: telebot.TeleBot):
-        self.bot = bot
-        self.active_tasks = 0
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    def __init__(self, bot: telebot.TeleBot) -> None:
+        self.bot: telebot.TeleBot = bot
+        self.active_tasks: int = 0
+        self.device: torch.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = models.vgg19(pretrained=True).features.to(self.device).eval()
         self.cnn_normalization_mean = self.CNN_NORMALIZATION_MEAN.to(self.device)
         self.cnn_normalization_std = self.CNN_NORMALIZATION_STD.to(self.device)
         self.unloader = transforms.ToPILImage()
+
         logging.info("Model created")
 
-    def image_loader(self, image_name, imgsize: list[int, int]):
+    def image_loader(self, image_name: str, imgsize: list[int, int]) -> torch.Tensor:
         if self.RESIZE_IMAGES:
             if imgsize[0] > self.MAX_IMG_SIZE[0]:
                 imgsize[0] = int(imgsize[0] / (imgsize[0] / self.MAX_IMG_SIZE[0]))
@@ -49,7 +51,7 @@ class StyleModel(object):
         logging.info(f"Uploaded file {image_name}, size: {tuple(imgsize)}")
         return image.to(self.device, torch.float)
 
-    def imshow(self, tensor):
+    def imshow(self, tensor: torch.Tensor) -> Image.Image:
         image = tensor.cpu().clone()
         image = image.squeeze(0)
         image = self.unloader(image)
@@ -61,11 +63,11 @@ class StyleModel(object):
             style_img, content_img,
             content_layers=None,
             style_layers=None
-    ):
+    ) -> tuple[nn.Sequential, list, list]:
         if style_layers is None:
             style_layers = ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5']
         if content_layers is None:
-            content_layers = ['conv_4']
+            content_layers = ['conv_6', 'conv_7']
         normalization = Normalization(normalization_mean, normalization_std).to(self.device)
 
         content_losses = []

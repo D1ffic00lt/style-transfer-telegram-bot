@@ -27,15 +27,15 @@ logging.info("Program started")
 
 
 @bot.message_handler(commands=["start", "convert"])
-def start(message: telebot.types.Message):
-    if model.active_tasks >= 1:
+def start(message: telebot.types.Message) -> None:
+    if model.active_tasks >= model.MAX_WORKERS:
         bot.send_message(message.chat.id, "Обработка уже выполняется!")
     else:
         bot.send_message(message.chat.id, "Отправьте стиль!")
         bot.register_next_step_handler(message, get_style)
 
 
-def get_style(message: telebot.types.Message):
+def get_style(message: telebot.types.Message) -> None:
     if message.photo is None:
         return
     if not os.path.isdir("user_files"):
@@ -50,7 +50,7 @@ def get_style(message: telebot.types.Message):
     bot.register_next_step_handler(message, get_object)
 
 
-def get_object(message: telebot.types.Message):
+def get_object(message: telebot.types.Message) -> None:
     if message.photo is None:
         return
     if not os.path.isdir("user_files"):
@@ -64,7 +64,7 @@ def get_object(message: telebot.types.Message):
     message_from_bot = bot.send_message(message.chat.id, "Обработка")
 
     image_shape = list(cv2.imread(f"user_files/object_{message.chat.id}.jpg").shape[:2])
-    logging.info(image_shape)
+    # logging.info(image_shape)
     style_img = model.image_loader(f"user_files/style_{message.chat.id}.jpg", image_shape)
     content_img = model.image_loader(f"user_files/object_{message.chat.id}.jpg", image_shape)
 
