@@ -568,75 +568,6 @@
 [2023-01-25 17:07:31,086] [INFO]: 64713 root Run : 200 Style Loss : 19.189119 Content Loss : 19.655487
 [2023-01-25 17:07:53,655] [INFO]: 64713 root Tensor converted to image
 [2023-01-25 20:00:26,995] [ERROR]: 64713 root HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 426, in _make_request
-    six.raise_from(e, None)
-  File "<string>", line 3, in raise_from
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 421, in _make_request
-    httplib_response = conn.getresponse()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/http/client.py", line 1377, in getresponse
-    response.begin()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/http/client.py", line 320, in begin
-    version, status, reason = self._read_status()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/http/client.py", line 281, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 704, in readinto
-    return self._sock.recv_into(b)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1241, in recv_into
-    return self.read(nbytes, buffer)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1099, in read
-    return self._sslobj.read(len, buffer)
-socket.timeout: The read operation timed out
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
-    resp = conn.urlopen(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 726, in urlopen
-    retries = retries.increment(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/retry.py", line 410, in increment
-    raise six.reraise(type(error), error, _stacktrace)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/packages/six.py", line 735, in reraise
-    raise value
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 670, in urlopen
-    httplib_response = self._make_request(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 428, in _make_request
-    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 335, in _raise_timeout
-    raise ReadTimeoutError(
-urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/d1ffic00lt/Documents/projects/telegram-bot-dls/main.py", line 93, in <module>
-    bot.polling(non_stop=True)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 618, in polling
-    self.__threaded_polling(non_stop, interval, timeout, long_polling_timeout, allowed_updates)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 680, in __threaded_polling
-    raise e
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 639, in __threaded_polling
-    polling_thread.raise_exceptions()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/util.py", line 107, in raise_exceptions
-    raise self.exception_info
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/util.py", line 89, in run
-    task(*args, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 359, in __retrieve_updates
-    updates = self.get_updates(offset=(self.last_update_id + 1),
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 337, in get_updates
-    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates, long_polling_timeout)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/apihelper.py", line 322, in get_updates
-    return _make_request(token, method_url, params=payload)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/apihelper.py", line 146, in _make_request
-    result = _get_req_session().request(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
-    r = adapter.send(request, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 578, in send
-    raise ReadTimeout(e, request=request)
-requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
 [2023-01-25 21:27:49,261] [INFO]: 70486 root Model created
 [2023-01-25 21:27:49,262] [INFO]: 70486 root Program started
 [2023-01-25 21:32:43,941] [INFO]: 70486 root photos/file_173.jpg
@@ -674,143 +605,6 @@ requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', po
 [2023-01-26 12:29:58,620] [INFO]: 77672 root Model created
 [2023-01-26 12:29:58,620] [INFO]: 77672 root Program started
 [2023-01-26 12:29:58,630] [ERROR]: 77672 root HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5794945584:AAExypncHz5Dp8RnTPtsibRK4pDcDDCwnfw/getUpdates?offset=-1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x149369880>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 159, in _new_conn
-    conn = connection.create_connection(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/connection.py", line 61, in create_connection
-    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 954, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno 8] nodename nor servname provided, or not known
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 670, in urlopen
-    httplib_response = self._make_request(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 381, in _make_request
-    self._validate_conn(conn)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 978, in _validate_conn
-    conn.connect()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 309, in connect
-    conn = self._new_conn()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 171, in _new_conn
-    raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x149369880>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
-    resp = conn.urlopen(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 726, in urlopen
-    retries = retries.increment(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/retry.py", line 446, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5794945584:AAExypncHz5Dp8RnTPtsibRK4pDcDDCwnfw/getUpdates?offset=-1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x149369880>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/d1ffic00lt/Documents/projects/telegram-bot-dls/main.py", line 93, in <module>
-    bot.polling(non_stop=True)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 618, in polling
-    self.__threaded_polling(non_stop, interval, timeout, long_polling_timeout, allowed_updates)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 680, in __threaded_polling
-    raise e
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 639, in __threaded_polling
-    polling_thread.raise_exceptions()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/util.py", line 107, in raise_exceptions
-    raise self.exception_info
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/util.py", line 89, in run
-    task(*args, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 356, in __retrieve_updates
-    self.__skip_updates()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 346, in __skip_updates
-    self.get_updates(offset=-1)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 337, in get_updates
-    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates, long_polling_timeout)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/apihelper.py", line 322, in get_updates
-    return _make_request(token, method_url, params=payload)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/apihelper.py", line 146, in _make_request
-    result = _get_req_session().request(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
-    r = adapter.send(request, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
-    raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5794945584:AAExypncHz5Dp8RnTPtsibRK4pDcDDCwnfw/getUpdates?offset=-1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x149369880>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
-[2023-01-26 12:30:12,695] [INFO]: 77768 root Model created
-[2023-01-26 12:30:12,696] [INFO]: 77768 root Program started
-[2023-01-26 12:30:12,729] [ERROR]: 77768 root HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5794945584:AAExypncHz5Dp8RnTPtsibRK4pDcDDCwnfw/getUpdates?offset=-1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15f6f4850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 159, in _new_conn
-    conn = connection.create_connection(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/connection.py", line 61, in create_connection
-    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 954, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno 8] nodename nor servname provided, or not known
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 670, in urlopen
-    httplib_response = self._make_request(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 381, in _make_request
-    self._validate_conn(conn)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 978, in _validate_conn
-    conn.connect()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 309, in connect
-    conn = self._new_conn()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 171, in _new_conn
-    raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x15f6f4850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
-    resp = conn.urlopen(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 726, in urlopen
-    retries = retries.increment(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/retry.py", line 446, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5794945584:AAExypncHz5Dp8RnTPtsibRK4pDcDDCwnfw/getUpdates?offset=-1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15f6f4850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/d1ffic00lt/Documents/projects/telegram-bot-dls/main.py", line 93, in <module>
-    bot.polling(non_stop=True)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 618, in polling
-    self.__threaded_polling(non_stop, interval, timeout, long_polling_timeout, allowed_updates)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 680, in __threaded_polling
-    raise e
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 639, in __threaded_polling
-    polling_thread.raise_exceptions()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/util.py", line 107, in raise_exceptions
-    raise self.exception_info
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/util.py", line 89, in run
-    task(*args, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 356, in __retrieve_updates
-    self.__skip_updates()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 346, in __skip_updates
-    self.get_updates(offset=-1)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 337, in get_updates
-    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates, long_polling_timeout)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/apihelper.py", line 322, in get_updates
-    return _make_request(token, method_url, params=payload)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/apihelper.py", line 146, in _make_request
-    result = _get_req_session().request(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
-    r = adapter.send(request, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
-    raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5794945584:AAExypncHz5Dp8RnTPtsibRK4pDcDDCwnfw/getUpdates?offset=-1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15f6f4850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
 [2023-01-26 12:30:20,403] [INFO]: 77788 root Model created
 [2023-01-26 12:30:20,403] [INFO]: 77788 root Program started
 [2023-01-26 12:32:37,125] [INFO]: 77788 root photos/file_179.jpg
@@ -895,75 +689,6 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.telegram.org'
 [2023-01-26 14:07:11,074] [INFO]: 81053 root Run : 200 Style Loss : 4.240165 Content Loss : 11.886042
 [2023-01-26 14:07:38,763] [INFO]: 81053 root Tensor converted to image
 [2023-01-26 14:08:42,371] [ERROR]: 81053 root HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 426, in _make_request
-    six.raise_from(e, None)
-  File "<string>", line 3, in raise_from
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 421, in _make_request
-    httplib_response = conn.getresponse()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/http/client.py", line 1377, in getresponse
-    response.begin()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/http/client.py", line 320, in begin
-    version, status, reason = self._read_status()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/http/client.py", line 281, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 704, in readinto
-    return self._sock.recv_into(b)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1241, in recv_into
-    return self.read(nbytes, buffer)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1099, in read
-    return self._sslobj.read(len, buffer)
-socket.timeout: The read operation timed out
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
-    resp = conn.urlopen(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 726, in urlopen
-    retries = retries.increment(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/retry.py", line 410, in increment
-    raise six.reraise(type(error), error, _stacktrace)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/packages/six.py", line 735, in reraise
-    raise value
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 670, in urlopen
-    httplib_response = self._make_request(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 428, in _make_request
-    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 335, in _raise_timeout
-    raise ReadTimeoutError(
-urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/d1ffic00lt/Documents/projects/telegram-bot-dls/main.py", line 93, in <module>
-    bot.polling(non_stop=True)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 618, in polling
-    self.__threaded_polling(non_stop, interval, timeout, long_polling_timeout, allowed_updates)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 680, in __threaded_polling
-    raise e
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 639, in __threaded_polling
-    polling_thread.raise_exceptions()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/util.py", line 107, in raise_exceptions
-    raise self.exception_info
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/util.py", line 89, in run
-    task(*args, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 359, in __retrieve_updates
-    updates = self.get_updates(offset=(self.last_update_id + 1),
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 337, in get_updates
-    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates, long_polling_timeout)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/apihelper.py", line 322, in get_updates
-    return _make_request(token, method_url, params=payload)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/apihelper.py", line 146, in _make_request
-    result = _get_req_session().request(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
-    r = adapter.send(request, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 578, in send
-    raise ReadTimeout(e, request=request)
-requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
 [2023-01-26 14:39:57,736] [INFO]: 81053 root Model created
 [2023-01-26 14:39:57,736] [INFO]: 81053 root Model created
 [2023-01-26 14:39:57,743] [INFO]: 81053 root Program started
@@ -981,72 +706,114 @@ requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', po
 [2023-01-26 14:45:44,593] [INFO]: 81504 root Run : 200 Style Loss : 144.015564 Content Loss : 50.236660
 [2023-01-26 14:46:13,590] [INFO]: 81504 root Tensor converted to image
 [2023-01-26 14:50:59,909] [ERROR]: 81504 root HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 426, in _make_request
-    six.raise_from(e, None)
-  File "<string>", line 3, in raise_from
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 421, in _make_request
-    httplib_response = conn.getresponse()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/http/client.py", line 1377, in getresponse
-    response.begin()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/http/client.py", line 320, in begin
-    version, status, reason = self._read_status()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/http/client.py", line 281, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 704, in readinto
-    return self._sock.recv_into(b)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1241, in recv_into
-    return self.read(nbytes, buffer)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1099, in read
-    return self._sslobj.read(len, buffer)
-socket.timeout: The read operation timed out
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
-    resp = conn.urlopen(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 726, in urlopen
-    retries = retries.increment(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/retry.py", line 410, in increment
-    raise six.reraise(type(error), error, _stacktrace)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/packages/six.py", line 735, in reraise
-    raise value
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 670, in urlopen
-    httplib_response = self._make_request(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 428, in _make_request
-    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 335, in _raise_timeout
-    raise ReadTimeoutError(
-urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/d1ffic00lt/Documents/projects/telegram-bot-dls/main.py", line 93, in <module>
-    bot.polling(non_stop=True)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 618, in polling
-    self.__threaded_polling(non_stop, interval, timeout, long_polling_timeout, allowed_updates)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 680, in __threaded_polling
-    raise e
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 639, in __threaded_polling
-    polling_thread.raise_exceptions()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/util.py", line 107, in raise_exceptions
-    raise self.exception_info
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/util.py", line 89, in run
-    task(*args, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 359, in __retrieve_updates
-    updates = self.get_updates(offset=(self.last_update_id + 1),
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/__init__.py", line 337, in get_updates
-    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates, long_polling_timeout)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/apihelper.py", line 322, in get_updates
-    return _make_request(token, method_url, params=payload)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/telebot/apihelper.py", line 146, in _make_request
-    result = _get_req_session().request(
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
-    r = adapter.send(request, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 578, in send
-    raise ReadTimeout(e, request=request)
-requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+[2023-01-28 16:12:39,568] [INFO]: 97811 root Model created
+[2023-01-28 16:12:39,568] [INFO]: 97811 root Program started
+[2023-01-28 16:12:51,660] [INFO]: 97811 root photos/file_205.jpg
+[2023-01-28 16:12:56,350] [INFO]: 97811 root Uploaded file user_files/style_453169809.jpg, size: (826, 1280)
+[2023-01-28 16:12:56,365] [INFO]: 97811 root Uploaded file user_files/object_453169809.jpg, size: (826, 1280)
+[2023-01-28 16:12:56,366] [INFO]: 97811 root Building the style transfer model..
+[2023-01-28 16:13:17,536] [INFO]: 97811 root Optimizing..
+[2023-01-28 16:14:07,044] [INFO]: 97811 root Run : 10 Style Loss : 509.828339 Content Loss : 35.087303
+[2023-01-28 16:14:56,687] [INFO]: 97811 root Run : 20 Style Loss : 282.877991 Content Loss : 39.842216
+[2023-01-28 16:15:52,043] [INFO]: 97928 root Model created
+[2023-01-28 16:15:52,043] [INFO]: 97928 root Program started
+[2023-01-28 16:16:07,356] [INFO]: 97928 root photos/file_205.jpg
+[2023-01-28 16:16:14,436] [INFO]: 97928 root Uploaded file user_files/style_453169809.jpg, size: (826, 1280)
+[2023-01-28 16:16:14,454] [INFO]: 97928 root Uploaded file user_files/object_453169809.jpg, size: (826, 1280)
+[2023-01-28 16:16:14,455] [INFO]: 97928 root Building the style transfer model..
+[2023-01-28 16:16:25,065] [INFO]: 97928 root Optimizing..
+[2023-01-28 16:16:58,802] [INFO]: 97928 root Run : 10 Style Loss : 509.350922 Content Loss : 18.046661
+[2023-01-28 16:17:41,085] [INFO]: 97928 root Run : 20 Style Loss : 280.342773 Content Loss : 22.056223
+[2023-01-28 16:18:30,113] [INFO]: 97928 root Run : 30 Style Loss : 172.172455 Content Loss : 23.464451
+[2023-01-28 16:19:18,038] [INFO]: 97928 root Run : 40 Style Loss : 107.537369 Content Loss : 24.087982
+[2023-01-28 16:20:12,347] [INFO]: 97928 root Run : 50 Style Loss : 78.908905 Content Loss : 23.609978
+[2023-01-28 16:21:07,392] [INFO]: 97928 root Run : 60 Style Loss : 62.303864 Content Loss : 22.992632
+[2023-01-28 16:21:58,755] [INFO]: 97928 root Run : 70 Style Loss : 44.770420 Content Loss : 22.787491
+[2023-01-28 16:23:26,901] [INFO]: 97928 root Run : 80 Style Loss : 33.793339 Content Loss : 22.344984
+[2023-01-28 16:25:22,723] [INFO]: 97928 root Run : 90 Style Loss : 26.775452 Content Loss : 21.933550
+[2023-01-28 16:27:19,859] [INFO]: 97928 root Run : 100 Style Loss : 22.129995 Content Loss : 21.410610
+[2023-01-28 16:29:18,278] [INFO]: 97928 root Run : 110 Style Loss : 19.104124 Content Loss : 20.969080
+[2023-01-28 16:31:22,026] [INFO]: 97928 root Run : 120 Style Loss : 16.280710 Content Loss : 20.648411
+[2023-01-28 16:33:34,617] [INFO]: 97928 root Run : 130 Style Loss : 14.131438 Content Loss : 20.266806
+[2023-01-28 16:35:29,582] [INFO]: 97928 root Run : 140 Style Loss : 12.379050 Content Loss : 19.830555
+[2023-01-28 16:37:21,658] [INFO]: 97928 root Run : 150 Style Loss : 11.401474 Content Loss : 19.608067
+[2023-01-28 16:39:07,787] [INFO]: 97928 root Run : 160 Style Loss : 10.210199 Content Loss : 19.217335
+[2023-01-28 16:41:00,721] [INFO]: 97928 root Run : 170 Style Loss : 9.398607 Content Loss : 18.903418
+[2023-01-28 16:43:03,182] [INFO]: 97928 root Run : 180 Style Loss : 8.604747 Content Loss : 18.642651
+[2023-01-28 16:45:07,634] [INFO]: 97928 root Run : 190 Style Loss : 8.011736 Content Loss : 18.441023
+[2023-01-28 16:47:07,625] [INFO]: 97928 root Run : 200 Style Loss : 7.623730 Content Loss : 18.087307
+[2023-01-28 16:49:18,752] [INFO]: 97928 root Run : 210 Style Loss : 7.315613 Content Loss : 17.951136
+[2023-01-28 16:51:23,655] [INFO]: 97928 root Run : 220 Style Loss : 6.764216 Content Loss : 17.816156
+[2023-01-28 16:53:37,235] [INFO]: 97928 root Run : 230 Style Loss : 6.378165 Content Loss : 17.642563
+[2023-01-28 16:55:45,338] [INFO]: 97928 root Run : 240 Style Loss : 6.143233 Content Loss : 17.654545
+[2023-01-28 16:57:46,821] [INFO]: 97928 root Run : 250 Style Loss : 5.728200 Content Loss : 17.415918
+[2023-01-28 16:59:45,695] [INFO]: 97928 root Run : 260 Style Loss : 5.720757 Content Loss : 17.551205
+[2023-01-28 17:02:10,506] [INFO]: 97928 root Run : 270 Style Loss : 5.167752 Content Loss : 17.182055
+[2023-01-28 17:04:20,722] [INFO]: 97928 root Run : 280 Style Loss : 5.092172 Content Loss : 17.210203
+[2023-01-28 17:06:22,309] [INFO]: 97928 root Run : 290 Style Loss : 5.049785 Content Loss : 17.124174
+[2023-01-28 17:08:31,532] [INFO]: 97928 root Run : 300 Style Loss : 4.595430 Content Loss : 16.965519
+[2023-01-28 17:10:53,948] [INFO]: 97928 root Run : 310 Style Loss : 4.478866 Content Loss : 16.970600
+[2023-01-28 17:12:49,131] [INFO]: 97928 root Run : 320 Style Loss : 4.447732 Content Loss : 17.065870
+[2023-01-28 17:15:00,862] [INFO]: 97928 root Run : 330 Style Loss : 4.189914 Content Loss : 16.917797
+[2023-01-28 17:17:07,569] [INFO]: 97928 root Run : 340 Style Loss : 4.219181 Content Loss : 16.939745
+[2023-01-28 17:19:47,859] [INFO]: 97928 root Run : 350 Style Loss : 4.115914 Content Loss : 16.892614
+[2023-01-28 17:22:11,685] [INFO]: 97928 root Run : 360 Style Loss : 4.813610 Content Loss : 17.169611
+[2023-01-28 17:24:13,922] [INFO]: 97928 root Run : 370 Style Loss : 4.167308 Content Loss : 16.847939
+[2023-01-28 17:26:28,144] [INFO]: 97928 root Run : 380 Style Loss : 7.785775 Content Loss : 17.523100
+[2023-01-28 17:28:56,410] [INFO]: 97928 root Run : 390 Style Loss : 3.901750 Content Loss : 16.811827
+[2023-01-28 17:30:55,610] [INFO]: 97928 root Run : 400 Style Loss : 3.761282 Content Loss : 16.780703
+[2023-01-28 17:32:43,604] [INFO]: 97928 root Run : 410 Style Loss : 3.802438 Content Loss : 16.917950
+[2023-01-28 17:35:00,138] [INFO]: 97928 root Run : 420 Style Loss : 79671.140625 Content Loss : 129.615585
+[2023-01-28 17:37:10,739] [INFO]: 97928 root Run : 430 Style Loss : 30847428.000000 Content Loss : 1508.119019
+[2023-01-28 17:39:24,295] [INFO]: 97928 root Run : 440 Style Loss : 34248328.000000 Content Loss : 1609.030151
+[2023-01-28 17:43:47,284] [INFO]: 3199 root Model created
+[2023-01-28 17:43:47,284] [INFO]: 3199 root Program started
+[2023-01-28 17:44:07,406] [INFO]: 3199 root photos/file_205.jpg
+[2023-01-28 17:44:12,743] [INFO]: 3199 root Uploaded file user_files/style_453169809.jpg, size: (826, 1280)
+[2023-01-28 17:44:12,758] [INFO]: 3199 root Uploaded file user_files/object_453169809.jpg, size: (826, 1280)
+[2023-01-28 17:44:12,759] [INFO]: 3199 root Building the style transfer model..
+[2023-01-28 17:44:30,446] [INFO]: 3199 root Optimizing..
+[2023-01-28 17:44:30,568] [ERROR]: 3199 root 'Tensor' object has no attribute 'copy'
+[2023-01-28 17:49:40,638] [INFO]: 3403 root Model created
+[2023-01-28 17:49:40,638] [INFO]: 3403 root Program started
+[2023-01-28 17:50:30,535] [INFO]: 3403 root photos/file_205.jpg
+[2023-01-28 17:50:40,815] [INFO]: 3403 root Uploaded file user_files/style_453169809.jpg, size: (826, 1280)
+[2023-01-28 17:50:40,831] [INFO]: 3403 root Uploaded file user_files/object_453169809.jpg, size: (826, 1280)
+[2023-01-28 17:50:40,833] [INFO]: 3403 root Building the style transfer model..
+[2023-01-28 17:50:54,509] [INFO]: 3403 root Optimizing..
+[2023-01-28 17:51:35,338] [INFO]: 3403 root Run : 10 Style Loss : 509.350922 Content Loss : 18.046661
+[2023-01-28 17:52:26,731] [INFO]: 3403 root Run : 20 Style Loss : 280.342773 Content Loss : 22.056223
+[2023-01-28 17:53:22,414] [INFO]: 3403 root Run : 30 Style Loss : 172.172455 Content Loss : 23.464451
+[2023-01-28 17:54:07,836] [INFO]: 3403 root Run : 40 Style Loss : 107.537369 Content Loss : 24.087982
+[2023-01-28 17:54:54,523] [INFO]: 3403 root Run : 50 Style Loss : 78.908905 Content Loss : 23.609978
+[2023-01-28 17:55:56,094] [INFO]: 3403 root Run : 60 Style Loss : 62.303864 Content Loss : 22.992632
+[2023-01-28 17:57:09,217] [INFO]: 3695 root Model created
+[2023-01-28 17:57:09,217] [INFO]: 3695 root Program started
+[2023-01-28 17:57:21,209] [INFO]: 3695 root photos/file_205.jpg
+[2023-01-28 17:57:27,310] [INFO]: 3695 root Uploaded file user_files/style_453169809.jpg, size: (826, 1280)
+[2023-01-28 17:57:27,327] [INFO]: 3695 root Uploaded file user_files/object_453169809.jpg, size: (826, 1280)
+[2023-01-28 17:57:27,328] [INFO]: 3695 root Building the style transfer model..
+[2023-01-28 17:57:40,315] [INFO]: 3695 root Optimizing..
+[2023-01-28 17:58:15,047] [INFO]: 3695 root Run : 10 Style Loss : 509.350922 Content Loss : 18.046661
+[2023-01-28 17:59:02,754] [INFO]: 3695 root Run : 20 Style Loss : 280.342773 Content Loss : 22.056223
+[2023-01-28 17:59:17,969] [INFO]: 3788 root Model created
+[2023-01-28 17:59:17,969] [INFO]: 3788 root Program started
+[2023-01-28 17:59:31,702] [INFO]: 3788 root photos/file_205.jpg
+[2023-01-28 17:59:34,538] [ERROR]: 3788 root [Errno 17] File exists: 'user_files'
+[2023-01-28 17:59:53,665] [INFO]: 3808 root Model created
+[2023-01-28 17:59:53,665] [INFO]: 3808 root Program started
+[2023-01-28 18:00:39,570] [INFO]: 3808 root photos/file_205.jpg
+[2023-01-28 18:00:45,720] [ERROR]: 3808 root [Errno 17] File exists: 'user_files'
+[2023-01-28 18:01:09,724] [INFO]: 3849 root Model created
+[2023-01-28 18:01:09,724] [INFO]: 3849 root Program started
+[2023-01-28 18:01:14,943] [INFO]: 3849 root photos/file_205.jpg
+[2023-01-28 18:01:19,904] [INFO]: 3849 root Uploaded file user_files/style_453169809.jpg, size: (826, 1280)
+[2023-01-28 18:01:19,920] [INFO]: 3849 root Uploaded file user_files/object_453169809.jpg, size: (826, 1280)
+[2023-01-28 18:01:19,921] [INFO]: 3849 root Building the style transfer model..
+[2023-01-28 18:01:31,812] [INFO]: 3849 root Optimizing..
+[2023-01-28 18:02:06,978] [INFO]: 3849 root Run : 10 Style Loss : 509.350922 Content Loss : 18.046661
+[2023-01-28 18:02:07,158] [INFO]: 3849 root Tensor converted to image
+[2023-01-28 18:02:50,952] [INFO]: 3849 root Run : 20 Style Loss : 280.342773 Content Loss : 22.056223
+[2023-01-28 18:02:51,204] [INFO]: 3849 root Tensor converted to image
+[2023-01-28 18:03:54,915] [INFO]: 3849 root Run : 30 Style Loss : 172.172455 Content Loss : 23.464451
+[2023-01-28 18:03:55,088] [INFO]: 3849 root Tensor converted to image

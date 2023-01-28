@@ -16,7 +16,7 @@ class StyleModel(object):
     MAX_IMG_SIZE = (650, 650)
     CNN_NORMALIZATION_MEAN = torch.tensor([0.485, 0.456, 0.406])
     CNN_NORMALIZATION_STD = torch.tensor([0.229, 0.224, 0.225])
-    RESIZE_IMAGES = True
+    RESIZE_IMAGES = False
     MAX_WORKERS = 1
 
     def __init__(self, bot: telebot.TeleBot) -> None:
@@ -55,7 +55,6 @@ class StyleModel(object):
         image = tensor.cpu().clone()
         image = image.squeeze(0)
         image = self.unloader(image)
-        logging.info(f"Tensor converted to image")
         return image
 
     async def get_style_model_and_losses(
@@ -67,7 +66,7 @@ class StyleModel(object):
         if style_layers is None:
             style_layers = ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5']
         if content_layers is None:
-            content_layers = ['conv_6', 'conv_7']
+            content_layers = ['conv_6']
         normalization = Normalization(normalization_mean, normalization_std).to(self.device)
 
         content_losses = []
@@ -136,7 +135,6 @@ class StyleModel(object):
         self.bot.edit_message_text("Обработка..\nОптимизация (это может занять некоторое время)", chat_id, message_id)
         run = [0]
         while run[0] <= num_steps:
-
             def closure():
                 with torch.no_grad():
                     input_img.clamp_(0, 1)
@@ -164,7 +162,14 @@ class StyleModel(object):
                         )
                     )
                     self.bot.edit_message_text(f"Обработка..\n{run[0]}/{NUM_STEPS}", chat_id, message_id)
-
+                if run[0] % 50 == 0 and run[0] != 0 and run[0] != num_steps:
+                    with torch.no_grad():
+                        prom_input = torch.clone(input_img)
+                        prom_input.clamp_(0, 1)
+                        self.imshow(prom_input).save(f"user_files/result_{chat_id}.jpg")
+                        self.bot.send_photo(
+                            chat_id, photo=open(f'user_files/result_{chat_id}.jpg', 'rb'), caption=f"{run[0]}/{NUM_STEPS}"
+                        )
                 return style_score + content_score
 
             optimizer.step(closure)
@@ -173,3 +178,4 @@ class StyleModel(object):
             input_img.clamp_(0, 1)
         self.active_tasks -= 1
         return input_img
+
