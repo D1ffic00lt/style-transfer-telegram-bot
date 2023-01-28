@@ -18,3 +18,9 @@
 | [modules/loss.py](modules/loss.py)   | ContentLoss, StyleLoss и Normalization                                        |
 | [modules/model.py](modules/model.py) | Код модели                                                                    |
 
+## Использование
+
+1. Отправьте команду **/start** или **/convert**
+2. Отправьте фотографию стиля
+3. Отправьте фотографию объекта
+4. Дождитесь результата!
