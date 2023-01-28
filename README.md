@@ -4,9 +4,14 @@
 Асинхронный телеграм бот на языке Python для переноса стиля изображения при помощи нейронной сети.
 
 ## Примеры
-
-<img src="https://media.discordapp.net/attachments/572705890524725248/1068940296802549942/Fotoram.io.jpg" width="300">
-<img src="https://media.discordapp.net/attachments/572705890524725248/1068940947104202782/Fotoram.io_1.jpg" width="300">
+<table>
+    <tr>
+        <img src="https://media.discordapp.net/attachments/572705890524725248/1068940296802549942/Fotoram.io.jpg" width="300">
+    </tr>
+    <tr>
+        <img src="https://media.discordapp.net/attachments/572705890524725248/1068940947104202782/Fotoram.io_1.jpg" width="300">
+    </tr>
+</table>
 
 ## Файлы и директории
 
