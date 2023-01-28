@@ -79,6 +79,7 @@ def get_object(message: telebot.types.Message) -> None:
     output = model.imshow(output)
     output.save(f"user_files/result_{message.chat.id}.jpg")
     bot.send_photo(message.chat.id, photo=open(f'user_files/result_{message.chat.id}.jpg', 'rb'))
+    logging.info("Tensor converted to image")
 
     try:
         os.remove(f"user_files/style_{message.chat.id}.jpg")
