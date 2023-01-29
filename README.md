@@ -1,7 +1,7 @@
 <h1 align="center">Style Transfer Telegram Bot</h1>
 <h2 align="center">Телеграм бот для переноса стиля изображения</h2>
 
-<h2 align="center"><a href="https://www.mozilla.org/ru/](https://t.me/foto_creator_nn_bot)">Ссылка на бота</a></p>
+<p align="center"><a href="https://www.mozilla.org/ru/">Ссылка на бота</a></p>
 
 Асинхронный телеграм бот на языке Python для переноса стиля изображения при помощи нейронной сети.
 
