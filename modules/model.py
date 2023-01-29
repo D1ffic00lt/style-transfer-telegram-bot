@@ -1,22 +1,22 @@
 import logging
 import telebot
 import torch
-import torchvision.models as models
-import torchvision.transforms as transforms
 import torch.nn as nn
 import torch.optim as optim
+import torchvision.models as models
+import torchvision.transforms as transforms
 
 from PIL import Image
 
 from config import NUM_STEPS
-from modules.loss import Normalization, ContentLoss, StyleLoss
+from modules.loss import *
 
 
 class StyleModel(object):
     MAX_IMG_SIZE = (650, 650)
     CNN_NORMALIZATION_MEAN = torch.tensor([0.485, 0.456, 0.406])
     CNN_NORMALIZATION_STD = torch.tensor([0.229, 0.224, 0.225])
-    RESIZE_IMAGES = False
+    RESIZE_IMAGES = True
     MAX_WORKERS = 1
 
     def __init__(self, bot: telebot.TeleBot) -> None:
@@ -28,7 +28,7 @@ class StyleModel(object):
         self.cnn_normalization_std = self.CNN_NORMALIZATION_STD.to(self.device)
         self.unloader = transforms.ToPILImage()
 
-        logging.info("Model created")
+        logging.info("Model inited")
 
     def image_loader(self, image_name: str, imgsize: list[int, int]) -> torch.Tensor:
         if self.RESIZE_IMAGES:
@@ -133,6 +133,7 @@ class StyleModel(object):
 
         logging.info('Optimizing..')
         self.bot.edit_message_text("Обработка..\nОптимизация (это может занять некоторое время)", chat_id, message_id)
+
         run = [0]
         while run[0] <= num_steps:
             def closure():
@@ -161,21 +162,24 @@ class StyleModel(object):
                         run[0], style_score.item(), content_score.item()
                         )
                     )
-                    self.bot.edit_message_text(f"Обработка..\n{run[0]}/{NUM_STEPS}", chat_id, message_id)
+                    self.bot.edit_message_text(f"Обработка..\n{run[0]}/{NUM_STEPS}", chat_id, message_id)  # self...
                 if run[0] % 50 == 0 and run[0] != 0 and run[0] != num_steps:
                     with torch.no_grad():
                         prom_input = torch.clone(input_img)
                         prom_input.clamp_(0, 1)
                         self.imshow(prom_input).save(f"user_files/result_{chat_id}.jpg")
                         self.bot.send_photo(
-                            chat_id, photo=open(f'user_files/result_{chat_id}.jpg', 'rb'), caption=f"{run[0]}/{NUM_STEPS}"
+                            chat_id, photo=open(f'user_files/result_{chat_id}.jpg', 'rb'),
+                            caption=f"{run[0]}/{NUM_STEPS}"
                         )
                 return style_score + content_score
 
             optimizer.step(closure)
+
         self.bot.edit_message_text("Обработка окончена", chat_id, message_id)
+
         with torch.no_grad():
             input_img.clamp_(0, 1)
         self.active_tasks -= 1
-        return input_img
 
+        return input_img

@@ -55,6 +55,7 @@ def get_object(message: telebot.types.Message) -> None:
         return
     if not os.path.isdir("user_files"):
         os.mkdir("user_files")
+
     file_info = bot.get_file(message.photo[-1].file_id)
     downloaded_file = bot.download_file(file_info.file_path)
 
@@ -64,11 +65,10 @@ def get_object(message: telebot.types.Message) -> None:
     message_from_bot = bot.send_message(message.chat.id, "Обработка")
 
     image_shape = list(cv2.imread(f"user_files/object_{message.chat.id}.jpg").shape[:2])
-    # logging.info(image_shape)
     style_img = model.image_loader(f"user_files/style_{message.chat.id}.jpg", image_shape)
     content_img = model.image_loader(f"user_files/object_{message.chat.id}.jpg", image_shape)
-
     input_img = content_img.clone()
+
     output = asyncio.run(
         model.run_style_transfer(
             content_img, style_img,
@@ -78,7 +78,9 @@ def get_object(message: telebot.types.Message) -> None:
     )
     output = model.imshow(output)
     output.save(f"user_files/result_{message.chat.id}.jpg")
+
     bot.send_photo(message.chat.id, photo=open(f'user_files/result_{message.chat.id}.jpg', 'rb'))
+
     logging.info("Tensor converted to image")
 
     try:
