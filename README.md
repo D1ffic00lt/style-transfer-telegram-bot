@@ -22,5 +22,8 @@
 
 1. Отправьте команду **/start** или **/convert**
 2. Отправьте фотографию стиля
+<img src="https://user-images.githubusercontent.com/69642892/215318213-dd1b1aa4-e7e0-476c-91b6-cc307830e583.png" width="700">
 3. Отправьте фотографию объекта
+<img src="https://media.discordapp.net/attachments/572705890524725248/1069191182598557736/image.png" width="700">
 4. Дождитесь результата!
+<img src="https://media.discordapp.net/attachments/572705890524725248/1069191281567342682/image.png" width="700">
