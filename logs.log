@@ -763,7 +763,7 @@
 [2023-01-28 17:28:56,410] [INFO]: 97928 root Run : 390 Style Loss : 3.901750 Content Loss : 16.811827
 [2023-01-28 17:30:55,610] [INFO]: 97928 root Run : 400 Style Loss : 3.761282 Content Loss : 16.780703
 [2023-01-28 17:32:43,604] [INFO]: 97928 root Run : 410 Style Loss : 3.802438 Content Loss : 16.917950
-[2023-01-28 17:35:00,138] [INFO]: 97928 root Run : 420 Style Loss : 79671.140625 Content Loss : 129.615585
+[2023-01-28 17:35:00,138] [INFO]: 97928 root Run : 420 Style Loss : 79671.140625 Content Loss : 129.615585 # печально
 [2023-01-28 17:37:10,739] [INFO]: 97928 root Run : 430 Style Loss : 30847428.000000 Content Loss : 1508.119019
 [2023-01-28 17:39:24,295] [INFO]: 97928 root Run : 440 Style Loss : 34248328.000000 Content Loss : 1609.030151
 [2023-01-28 17:43:47,284] [INFO]: 3199 root Model created

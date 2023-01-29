@@ -5,8 +5,8 @@
 
 ## Примеры
 <p>
-    <img src="https://media.discordapp.net/attachments/572705890524725248/1068940296802549942/Fotoram.io.jpg" width="250">
-    <img src="https://media.discordapp.net/attachments/572705890524725248/1068940947104202782/Fotoram.io_1.jpg" width="250">    
+    <img src="https://media.discordapp.net/attachments/572705890524725248/1068940296802549942/Fotoram.io.jpg" width="370">
+    <img src="https://media.discordapp.net/attachments/572705890524725248/1068940947104202782/Fotoram.io_1.jpg" width="370">    
 </p>
 
 ## Файлы и директории
