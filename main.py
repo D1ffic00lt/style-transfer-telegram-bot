@@ -4,6 +4,7 @@ import warnings
 import telebot
 import logging
 import asyncio
+import time
 
 from config import (
     TOKEN, FORMAT,
@@ -97,3 +98,4 @@ if __name__ == '__main__':
     except Exception as ex:
         if not isinstance(ex, telebot.apihelper.ApiTelegramException):
             logging.error(ex, exc_info=True)
+        time.sleep(5)
