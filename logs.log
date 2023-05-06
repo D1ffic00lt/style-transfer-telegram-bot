@@ -34,7 +34,6 @@
 [2023-01-24 22:02:10,170] [INFO]: 51354 root Uploaded file user_files/style_453169809.jpg
 [2023-01-24 22:02:10,176] [INFO]: 51354 root Uploaded file user_files/object_453169809.jpg
 [2023-01-24 22:02:10,176] [INFO]: 51354 root cloned
-[2023-01-24 22:02:10,180] [ERROR]: 51354 root Task <Task pending name='Task-4' coro=<Queue.join() running at /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/queues.py:223> cb=[_run_until_complete_cb() at /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py:184]> got Future <Future pending> attached to a different loop
 [2023-01-24 22:02:50,928] [INFO]: 51354 root Model created
 [2023-01-24 22:02:50,928] [INFO]: 51354 root Model created
 [2023-01-24 22:02:50,928] [INFO]: 51354 root Program started
@@ -604,7 +603,6 @@
 [2023-01-26 01:56:43,292] [INFO]: 77090 root Tensor converted to image
 [2023-01-26 12:29:58,620] [INFO]: 77672 root Model created
 [2023-01-26 12:29:58,620] [INFO]: 77672 root Program started
-[2023-01-26 12:29:58,630] [ERROR]: 77672 root HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5794945584:AAExypncHz5Dp8RnTPtsibRK4pDcDDCwnfw/getUpdates?offset=-1&timeout=20 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x149369880>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
 [2023-01-26 12:30:20,403] [INFO]: 77788 root Model created
 [2023-01-26 12:30:20,403] [INFO]: 77788 root Program started
 [2023-01-26 12:32:37,125] [INFO]: 77788 root photos/file_179.jpg
