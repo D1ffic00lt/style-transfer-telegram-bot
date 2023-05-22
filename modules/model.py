@@ -81,7 +81,7 @@ class StyleModel(object):
                 name = 'conv_{}'.format(indexes)
             elif isinstance(layer, nn.ReLU):
                 name = 'relu_{}'.format(indexes)
-                layer = nn.ReLU(inplace=False)
+                layer = nn.ReLU()
             elif isinstance(layer, nn.MaxPool2d):
                 name = 'pool_{}'.format(indexes)
             elif isinstance(layer, nn.BatchNorm2d):
@@ -142,8 +142,8 @@ class StyleModel(object):
 
                 optimizer.zero_grad()
                 style_model(input_img)
-                style_score = 0
-                content_score = 0
+                style_score: torch.FloatType = 0
+                content_score: torch.FloatType = 0
 
                 for sl in style_losses:
                     style_score += sl.loss
@@ -153,7 +153,7 @@ class StyleModel(object):
                 style_score *= style_weight
                 content_score *= content_weight
 
-                loss = style_score + content_score
+                loss: torch.FloatType = style_score + content_score
                 loss.backward()
 
                 run[0] += 1
